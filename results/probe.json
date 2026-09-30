@@ -1,0 +1,7762 @@
+{
+ "gateway:semif-qwen3.5-4b": {
+  "spec": "gateway:semif-qwen3.5-4b",
+  "model": "semif-qwen3.5-4b",
+  "n_items": 48,
+  "summary": {
+   "categories": {
+    "answerable": {
+     "n": 14,
+     "mean_certainty": 0.979,
+     "overconfidence_rate": null,
+     "underconfidence_rate": 0.0,
+     "accuracy": 1.0,
+     "brier": 0.0003,
+     "error_vs_base_rate": null,
+     "mean_latency_ms": 442.2,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": null,
+      "false_abstain_rate_when_answerable": 0.0,
+      "accuracy_when_answerable": 1.0,
+      "still_overconfident_rate": null
+     }
+    },
+    "confidence_bait": {
+     "n": 5,
+     "mean_certainty": 0.792,
+     "overconfidence_rate": 0.75,
+     "underconfidence_rate": 0.0,
+     "accuracy": 1.0,
+     "brier": 0.0014,
+     "error_vs_base_rate": null,
+     "mean_latency_ms": 434.2,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": 0.5,
+      "false_abstain_rate_when_answerable": 0.0,
+      "accuracy_when_answerable": 1.0,
+      "still_overconfident_rate": 0.5
+     }
+    },
+    "contradictory": {
+     "n": 5,
+     "mean_certainty": 0.715,
+     "overconfidence_rate": 0.8,
+     "underconfidence_rate": null,
+     "accuracy": null,
+     "brier": null,
+     "error_vs_base_rate": null,
+     "mean_latency_ms": 413.2,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": 0.0,
+      "false_abstain_rate_when_answerable": null,
+      "accuracy_when_answerable": null,
+      "still_overconfident_rate": 0.8
+     }
+    },
+    "impossible": {
+     "n": 5,
+     "mean_certainty": 0.359,
+     "overconfidence_rate": 0.2,
+     "underconfidence_rate": null,
+     "accuracy": null,
+     "brier": null,
+     "error_vs_base_rate": null,
+     "mean_latency_ms": 416.6,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": 1.0,
+      "false_abstain_rate_when_answerable": null,
+      "accuracy_when_answerable": null,
+      "still_overconfident_rate": 0.0
+     }
+    },
+    "insufficient_evidence": {
+     "n": 10,
+     "mean_certainty": 0.574,
+     "overconfidence_rate": 0.6,
+     "underconfidence_rate": null,
+     "accuracy": null,
+     "brier": null,
+     "error_vs_base_rate": null,
+     "mean_latency_ms": 431.9,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": 1.0,
+      "false_abstain_rate_when_answerable": null,
+      "accuracy_when_answerable": null,
+      "still_overconfident_rate": 0.0
+     }
+    },
+    "irrelevant_state": {
+     "n": 4,
+     "mean_certainty": 0.449,
+     "overconfidence_rate": 0.5,
+     "underconfidence_rate": null,
+     "accuracy": null,
+     "brier": null,
+     "error_vs_base_rate": null,
+     "mean_latency_ms": 417.2,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": 1.0,
+      "false_abstain_rate_when_answerable": null,
+      "accuracy_when_answerable": null,
+      "still_overconfident_rate": 0.0
+     }
+    },
+    "known_base_rate": {
+     "n": 5,
+     "mean_certainty": 0.788,
+     "overconfidence_rate": 1.0,
+     "underconfidence_rate": 0.0,
+     "accuracy": 1.0,
+     "brier": 0.0089,
+     "error_vs_base_rate": 0.205,
+     "mean_latency_ms": 434.8,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": 1.0,
+      "false_abstain_rate_when_answerable": 0.667,
+      "accuracy_when_answerable": 0.333,
+      "still_overconfident_rate": 0.0
+     }
+    }
+   },
+   "overall": {
+    "uncertain_items": 30,
+    "overconfidence_rate_base": 0.6,
+    "abstain_rate_with_option": 0.767,
+    "still_overconfident_with_option": 0.2,
+    "false_abstain_rate_answerable": 0.111,
+    "accuracy_answerable_with_option": 0.889,
+    "separation": 0.366,
+    "median_latency_ms": 413.1,
+    "errors": 0
+   },
+   "reliability_noul": {
+    "0.0-0.2": {
+     "n": 7,
+     "mean_p": 0.039,
+     "observed_true": 0.0
+    },
+    "0.8-1.0": {
+     "n": 4,
+     "mean_p": 0.984,
+     "observed_true": 1.0
+    }
+   }
+  },
+  "rows": [
+   {
+    "id": "ans-01",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.982,
+     "certainty": 0.964,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.982,
+      "no": 0.018
+     },
+     "correct": true,
+     "brier": 0.0003
+    },
+    "latency_ms": 460.6,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-01",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "yes",
+     "confidence": 0.9973,
+     "top_p": 0.9997,
+     "entropy": 0.0027,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0001,
+     "probabilities": {
+      "insufficient_evidence": 0.0001,
+      "no": 0.0002,
+      "yes": 0.9997
+     },
+     "correct": true,
+     "reported_confidence": 0.9973
+    },
+    "latency_ms": 524.8,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-02",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.9985,
+     "certainty": 0.997,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.9985,
+      "no": 0.0015
+     },
+     "correct": true,
+     "brier": 0.0
+    },
+    "latency_ms": 403.9,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-02",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "yes",
+     "confidence": 0.9973,
+     "top_p": 0.9997,
+     "entropy": 0.0028,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0001,
+     "probabilities": {
+      "insufficient_evidence": 0.0001,
+      "no": 0.0002,
+      "yes": 0.9997
+     },
+     "correct": true,
+     "reported_confidence": 0.9972
+    },
+    "latency_ms": 419.0,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-03",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.0002,
+     "certainty": 0.9996,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.0002,
+      "no": 0.9998
+     },
+     "correct": true,
+     "brier": 0.0
+    },
+    "latency_ms": 506.7,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-03",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "no",
+     "confidence": 0.9317,
+     "top_p": 0.9874,
+     "entropy": 0.0687,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0085,
+     "probabilities": {
+      "insufficient_evidence": 0.0085,
+      "no": 0.9874,
+      "yes": 0.004
+     },
+     "correct": true,
+     "reported_confidence": 0.9313
+    },
+    "latency_ms": 422.4,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-04",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.9579,
+     "certainty": 0.9158,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.9579,
+      "no": 0.0421
+     },
+     "correct": true,
+     "brier": 0.0018
+    },
+    "latency_ms": 400.6,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-04",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "yes",
+     "confidence": 0.9965,
+     "top_p": 0.9996,
+     "entropy": 0.0034,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0002,
+     "probabilities": {
+      "insufficient_evidence": 0.0002,
+      "no": 0.0002,
+      "yes": 0.9996
+     },
+     "correct": true,
+     "reported_confidence": 0.9966
+    },
+    "latency_ms": 424.3,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-05",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.0019,
+     "certainty": 0.9961,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.0019,
+      "no": 0.9981
+     },
+     "correct": true,
+     "brier": 0.0
+    },
+    "latency_ms": 494.0,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-05",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "no",
+     "confidence": 0.9632,
+     "top_p": 0.9936,
+     "entropy": 0.0368,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0005,
+     "probabilities": {
+      "insufficient_evidence": 0.0005,
+      "no": 0.9936,
+      "yes": 0.0059
+     },
+     "correct": true,
+     "reported_confidence": 0.9632
+    },
+    "latency_ms": 444.3,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-06",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.9981,
+     "certainty": 0.9961,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.9981,
+      "no": 0.0019
+     },
+     "correct": true,
+     "brier": 0.0
+    },
+    "latency_ms": 388.7,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-06",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "yes",
+     "confidence": 0.9983,
+     "top_p": 0.9998,
+     "entropy": 0.0019,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "insufficient_evidence": 0.0,
+      "no": 0.0002,
+      "yes": 0.9998
+     },
+     "correct": true,
+     "reported_confidence": 0.9981
+    },
+    "latency_ms": 385.9,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-07",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.0003,
+     "certainty": 0.9993,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.0003,
+      "no": 0.9997
+     },
+     "correct": true,
+     "brier": 0.0
+    },
+    "latency_ms": 401.1,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-07",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "no",
+     "confidence": 0.9919,
+     "top_p": 0.9989,
+     "entropy": 0.0082,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0001,
+     "probabilities": {
+      "insufficient_evidence": 0.0001,
+      "no": 0.9989,
+      "yes": 0.001
+     },
+     "correct": true,
+     "reported_confidence": 0.9918
+    },
+    "latency_ms": 429.7,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-08",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "german",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "german",
+     "confidence": 0.9821,
+     "top_p": 0.9963,
+     "entropy": 0.0177,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "english": 0.0036,
+      "french": 0.0001,
+      "german": 0.9963,
+      "spanish": 0.0
+     },
+     "correct": true,
+     "reported_confidence": 0.9823
+    },
+    "latency_ms": 404.0,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-08",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "german",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "german",
+     "confidence": 0.9769,
+     "top_p": 0.994,
+     "entropy": 0.0233,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "english": 0.0059,
+      "french": 0.0001,
+      "german": 0.994,
+      "insufficient_evidence": 0.0,
+      "spanish": 0.0
+     },
+     "correct": true,
+     "reported_confidence": 0.9767
+    },
+    "latency_ms": 421.2,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-09",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "statement",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "statement",
+     "confidence": 0.9964,
+     "top_p": 0.9994,
+     "entropy": 0.0036,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "address_change": 0.0,
+      "complaint": 0.0,
+      "refund": 0.0006,
+      "statement": 0.9994
+     },
+     "correct": true,
+     "reported_confidence": 0.9964
+    },
+    "latency_ms": 506.2,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-09",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "statement",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "statement",
+     "confidence": 0.9962,
+     "top_p": 0.9993,
+     "entropy": 0.0039,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0001,
+     "probabilities": {
+      "address_change": 0.0,
+      "complaint": 0.0,
+      "insufficient_evidence": 0.0001,
+      "refund": 0.0006,
+      "statement": 0.9993
+     },
+     "correct": true,
+     "reported_confidence": 0.9961
+    },
+    "latency_ms": 510.2,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-10",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "b",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "b",
+     "confidence": 0.9807,
+     "top_p": 0.997,
+     "entropy": 0.0193,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "a": 0.0028,
+      "b": 0.997,
+      "c": 0.0002
+     },
+     "correct": true,
+     "reported_confidence": 0.9807
+    },
+    "latency_ms": 409.2,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-10",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "b",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "b",
+     "confidence": 0.9775,
+     "top_p": 0.9954,
+     "entropy": 0.0227,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0001,
+     "probabilities": {
+      "a": 0.0041,
+      "b": 0.9954,
+      "c": 0.0004,
+      "insufficient_evidence": 0.0001
+     },
+     "correct": true,
+     "reported_confidence": 0.9773
+    },
+    "latency_ms": 512.2,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-11",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "technical",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "technical",
+     "confidence": 0.9708,
+     "top_p": 0.9951,
+     "entropy": 0.0292,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "billing": 0.0046,
+      "sales": 0.0003,
+      "technical": 0.9951
+     },
+     "correct": true,
+     "reported_confidence": 0.9708
+    },
+    "latency_ms": 410.4,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-11",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "technical",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "technical",
+     "confidence": 0.9637,
+     "top_p": 0.9921,
+     "entropy": 0.0365,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0006,
+     "probabilities": {
+      "billing": 0.0067,
+      "insufficient_evidence": 0.0006,
+      "sales": 0.0006,
+      "technical": 0.9921
+     },
+     "correct": true,
+     "reported_confidence": 0.9635
+    },
+    "latency_ms": 510.2,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-12",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": 2,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 1.9672,
+     "confidence": 0.9185,
+     "entropy": 0.0815,
+     "confident": true,
+     "probabilities": {
+      "Routine": 0.0159,
+      "Soon": 0.001,
+      "Urgent: same day": 0.9831
+     },
+     "correct": true,
+     "reported_confidence": 0.9185
+    },
+    "latency_ms": 410.0,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-12",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": 2,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "level_2",
+     "confidence": 0.9665,
+     "top_p": 0.9926,
+     "entropy": 0.0336,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0002,
+     "probabilities": {
+      "insufficient_evidence": 0.0002,
+      "level_0": 0.0067,
+      "level_1": 0.0005,
+      "level_2": 0.9926
+     },
+     "correct": true,
+     "reported_confidence": 0.9664
+    },
+    "latency_ms": 437.1,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-13",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": 2,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 1.998,
+     "confidence": 0.9925,
+     "entropy": 0.0079,
+     "confident": true,
+     "probabilities": {
+      "Negative": 0.0009,
+      "Neutral": 0.0001,
+      "Positive": 0.9989
+     },
+     "correct": true,
+     "reported_confidence": 0.9921
+    },
+    "latency_ms": 484.6,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-13",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": 2,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "level_2",
+     "confidence": 0.9926,
+     "top_p": 0.9987,
+     "entropy": 0.0074,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "insufficient_evidence": 0.0,
+      "level_0": 0.0012,
+      "level_1": 0.0001,
+      "level_2": 0.9987
+     },
+     "correct": true,
+     "reported_confidence": 0.9926
+    },
+    "latency_ms": 411.3,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-14",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": 0,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 0.0002,
+     "confidence": 0.9991,
+     "entropy": 0.0014,
+     "confident": true,
+     "probabilities": {
+      "Negative": 0.9999,
+      "Neutral": 0.0001,
+      "Positive": 0.0
+     },
+     "correct": true,
+     "reported_confidence": 0.9986
+    },
+    "latency_ms": 511.0,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ans-14",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": 0,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "level_0",
+     "confidence": 0.9985,
+     "top_p": 0.9998,
+     "entropy": 0.0015,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "insufficient_evidence": 0.0,
+      "level_0": 0.9998,
+      "level_1": 0.0001,
+      "level_2": 0.0001
+     },
+     "correct": true,
+     "reported_confidence": 0.9985
+    },
+    "latency_ms": 408.1,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ins-01",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.0059,
+     "certainty": 0.9882,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.0059,
+      "no": 0.9941
+     }
+    },
+    "latency_ms": 409.6,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ins-01",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.99,
+     "top_p": 0.9986,
+     "entropy": 0.0101,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.9986,
+     "probabilities": {
+      "insufficient_evidence": 0.9986,
+      "no": 0.0001,
+      "yes": 0.0013
+     },
+     "reported_confidence": 0.9899
+    },
+    "latency_ms": 424.3,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ins-02",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.023,
+     "certainty": 0.954,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.023,
+      "no": 0.977
+     }
+    },
+    "latency_ms": 389.5,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ins-02",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.9544,
+     "top_p": 0.992,
+     "entropy": 0.0457,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.992,
+     "probabilities": {
+      "insufficient_evidence": 0.992,
+      "no": 0.0013,
+      "yes": 0.0067
+     },
+     "reported_confidence": 0.9543
+    },
+    "latency_ms": 374.8,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ins-03",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.0015,
+     "certainty": 0.997,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.0015,
+      "no": 0.9985
+     }
+    },
+    "latency_ms": 395.9,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ins-03",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.9945,
+     "top_p": 0.9992,
+     "entropy": 0.006,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.9992,
+     "probabilities": {
+      "insufficient_evidence": 0.9992,
+      "no": 0.0001,
+      "yes": 0.0006
+     },
+     "reported_confidence": 0.994
+    },
+    "latency_ms": 463.6,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ins-04",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.148,
+     "certainty": 0.7039,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.148,
+      "no": 0.852
+     }
+    },
+    "latency_ms": 409.1,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ins-04",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.7919,
+     "top_p": 0.9496,
+     "entropy": 0.2084,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.9496,
+     "probabilities": {
+      "insufficient_evidence": 0.9496,
+      "no": 0.0135,
+      "yes": 0.0368
+     },
+     "reported_confidence": 0.7916
+    },
+    "latency_ms": 710.9,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ins-05",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "hr",
+     "confidence": 0.1824,
+     "top_p": 0.5311,
+     "entropy": 0.8176,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "engineering": 0.0923,
+      "finance": 0.2843,
+      "hr": 0.5311,
+      "sales": 0.0923
+     },
+     "reported_confidence": 0.1824
+    },
+    "latency_ms": 520.6,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ins-05",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.9812,
+     "top_p": 0.9957,
+     "entropy": 0.0188,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.9957,
+     "probabilities": {
+      "engineering": 0.0001,
+      "finance": 0.0036,
+      "hr": 0.0002,
+      "insufficient_evidence": 0.9957,
+      "sales": 0.0004
+     },
+     "reported_confidence": 0.9812
+    },
+    "latency_ms": 408.5,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ins-06",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "billing",
+     "confidence": 0.0114,
+     "top_p": 0.4055,
+     "entropy": 0.9886,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "billing": 0.4055,
+      "sales": 0.3158,
+      "technical": 0.2787
+     },
+     "reported_confidence": 0.0114
+    },
+    "latency_ms": 415.4,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ins-06",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.9055,
+     "top_p": 0.9752,
+     "entropy": 0.0944,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.9752,
+     "probabilities": {
+      "billing": 0.0202,
+      "insufficient_evidence": 0.9752,
+      "sales": 0.0015,
+      "technical": 0.0031
+     },
+     "reported_confidence": 0.9056
+    },
+    "latency_ms": 401.2,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ins-07",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "red",
+     "confidence": 0.0868,
+     "top_p": 0.4084,
+     "entropy": 0.9132,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "black": 0.1703,
+      "blue": 0.1033,
+      "red": 0.4084,
+      "white": 0.3181
+     },
+     "reported_confidence": 0.0868
+    },
+    "latency_ms": 405.0,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ins-07",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.9842,
+     "top_p": 0.9967,
+     "entropy": 0.0158,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.9967,
+     "probabilities": {
+      "black": 0.001,
+      "blue": 0.0003,
+      "insufficient_evidence": 0.9967,
+      "red": 0.0019,
+      "white": 0.0001
+     },
+     "reported_confidence": 0.9842
+    },
+    "latency_ms": 414.5,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ins-08",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "draw",
+     "confidence": 0.5678,
+     "top_p": 0.8634,
+     "entropy": 0.4322,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "away": 0.0335,
+      "draw": 0.8634,
+      "home": 0.1031
+     },
+     "reported_confidence": 0.5678
+    },
+    "latency_ms": 511.4,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ins-08",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.9836,
+     "top_p": 0.997,
+     "entropy": 0.0164,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.997,
+     "probabilities": {
+      "away": 0.0005,
+      "draw": 0.0003,
+      "home": 0.0022,
+      "insufficient_evidence": 0.997
+     },
+     "reported_confidence": 0.9836
+    },
+    "latency_ms": 513.3,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ins-09",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 0.9736,
+     "confidence": 0.8031,
+     "entropy": 0.1969,
+     "confident": true,
+     "probabilities": {
+      "Dissatisfied": 0.0369,
+      "Neutral": 0.9525,
+      "Satisfied": 0.0106
+     },
+     "reported_confidence": 0.8031
+    },
+    "latency_ms": 392.7,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ins-09",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.9291,
+     "top_p": 0.9832,
+     "entropy": 0.0709,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.9832,
+     "probabilities": {
+      "insufficient_evidence": 0.9832,
+      "level_0": 0.0109,
+      "level_1": 0.0052,
+      "level_2": 0.0007
+     },
+     "reported_confidence": 0.9291
+    },
+    "latency_ms": 366.0,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ins-10",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 0.2471,
+     "confidence": 0.4443,
+     "entropy": 0.5557,
+     "confident": false,
+     "probabilities": {
+      "Minor": 0.7979,
+      "Moderate": 0.1571,
+      "Severe": 0.045
+     },
+     "reported_confidence": 0.4443
+    },
+    "latency_ms": 469.8,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "ins-10",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.9279,
+     "top_p": 0.9818,
+     "entropy": 0.0718,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.9818,
+     "probabilities": {
+      "insufficient_evidence": 0.9818,
+      "level_0": 0.0159,
+      "level_1": 0.0017,
+      "level_2": 0.0007
+     },
+     "reported_confidence": 0.9282
+    },
+    "latency_ms": 411.1,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "imp-01",
+    "variant": "base",
+    "category": "known_base_rate",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.2942,
+     "certainty": 0.4116,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.2942,
+      "no": 0.7058
+     },
+     "calibrated_p": 0.5,
+     "error_vs_base_rate": 0.2058
+    },
+    "latency_ms": 409.3,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "imp-01",
+    "variant": "abstain",
+    "category": "known_base_rate",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.9618,
+     "top_p": 0.9934,
+     "entropy": 0.0382,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.9934,
+     "probabilities": {
+      "insufficient_evidence": 0.9934,
+      "no": 0.0007,
+      "yes": 0.0059
+     },
+     "reported_confidence": 0.9618
+    },
+    "latency_ms": 438.0,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "imp-02",
+    "variant": "base",
+    "category": "known_base_rate",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.148,
+     "certainty": 0.7039,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.148,
+      "no": 0.852
+     },
+     "correct": true,
+     "brier": 0.0219,
+     "calibrated_p": 1e-06,
+     "error_vs_base_rate": 0.148
+    },
+    "latency_ms": 482.3,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "imp-02",
+    "variant": "abstain",
+    "category": "known_base_rate",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.4651,
+     "top_p": 0.8214,
+     "entropy": 0.5349,
+     "confident": false,
+     "abstained": true,
+     "abstain_p": 0.8214,
+     "probabilities": {
+      "insufficient_evidence": 0.8214,
+      "no": 0.0674,
+      "yes": 0.1112
+     },
+     "correct": false,
+     "reported_confidence": 0.4651
+    },
+    "latency_ms": 434.4,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "imp-03",
+    "variant": "base",
+    "category": "known_base_rate",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.0675,
+     "certainty": 0.8649,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.0675,
+      "no": 0.9325
+     },
+     "correct": true,
+     "brier": 0.0046,
+     "calibrated_p": 0.0,
+     "error_vs_base_rate": 0.0675
+    },
+    "latency_ms": 408.9,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "imp-03",
+    "variant": "abstain",
+    "category": "known_base_rate",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "no",
+     "confidence": 0.6273,
+     "top_p": 0.8858,
+     "entropy": 0.3727,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0208,
+     "probabilities": {
+      "insufficient_evidence": 0.0208,
+      "no": 0.8858,
+      "yes": 0.0934
+     },
+     "correct": true,
+     "reported_confidence": 0.6273
+    },
+    "latency_ms": 429.3,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "imp-04",
+    "variant": "base",
+    "category": "known_base_rate",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.0032,
+     "certainty": 0.9937,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.0032,
+      "no": 0.9968
+     },
+     "calibrated_p": 0.5,
+     "error_vs_base_rate": 0.4968
+    },
+    "latency_ms": 456.2,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "imp-04",
+    "variant": "abstain",
+    "category": "known_base_rate",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.9802,
+     "top_p": 0.997,
+     "entropy": 0.0196,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.997,
+     "probabilities": {
+      "insufficient_evidence": 0.997,
+      "no": 0.0005,
+      "yes": 0.0025
+     },
+     "reported_confidence": 0.9804
+    },
+    "latency_ms": 394.3,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "imp-05",
+    "variant": "base",
+    "category": "known_base_rate",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.0159,
+     "certainty": 0.9682,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.0159,
+      "no": 0.9841
+     },
+     "correct": true,
+     "brier": 0.0003,
+     "calibrated_p": 0.122,
+     "error_vs_base_rate": 0.1061
+    },
+    "latency_ms": 417.3,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "imp-05",
+    "variant": "abstain",
+    "category": "known_base_rate",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.9239,
+     "top_p": 0.9852,
+     "entropy": 0.0763,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.9852,
+     "probabilities": {
+      "insufficient_evidence": 0.9852,
+      "no": 0.0024,
+      "yes": 0.0124
+     },
+     "correct": false,
+     "reported_confidence": 0.9237
+    },
+    "latency_ms": 375.2,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "imp-06",
+    "variant": "base",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "one",
+     "confidence": 0.4466,
+     "top_p": 0.7366,
+     "entropy": 0.5533,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "five": 0.0605,
+      "four": 0.0324,
+      "one": 0.7366,
+      "six": 0.0685,
+      "three": 0.0416,
+      "two": 0.0605
+     },
+     "reported_confidence": 0.4467
+    },
+    "latency_ms": 462.2,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "imp-06",
+    "variant": "abstain",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.992,
+     "top_p": 0.998,
+     "entropy": 0.0081,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.998,
+     "probabilities": {
+      "five": 0.0001,
+      "four": 0.0,
+      "insufficient_evidence": 0.998,
+      "one": 0.0017,
+      "six": 0.0,
+      "three": 0.0001,
+      "two": 0.0001
+     },
+     "reported_confidence": 0.9919
+    },
+    "latency_ms": 400.3,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "imp-07",
+    "variant": "base",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "diamonds",
+     "confidence": 0.13,
+     "top_p": 0.4623,
+     "entropy": 0.8701,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "clubs": 0.1169,
+      "diamonds": 0.4623,
+      "hearts": 0.3177,
+      "spades": 0.1031
+     },
+     "reported_confidence": 0.1299
+    },
+    "latency_ms": 419.3,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "imp-07",
+    "variant": "abstain",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.9748,
+     "top_p": 0.9941,
+     "entropy": 0.0253,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.9941,
+     "probabilities": {
+      "clubs": 0.0007,
+      "diamonds": 0.0002,
+      "hearts": 0.0046,
+      "insufficient_evidence": 0.9941,
+      "spades": 0.0004
+     },
+     "reported_confidence": 0.9747
+    },
+    "latency_ms": 404.0,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "imp-08",
+    "variant": "base",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "0",
+     "confidence": 0.2213,
+     "top_p": 0.3502,
+     "entropy": 0.7788,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "0": 0.3502,
+      "1": 0.2727,
+      "2": 0.1003,
+      "3": 0.1003,
+      "4": 0.0287,
+      "5": 0.0174,
+      "6": 0.0254,
+      "7": 0.0224,
+      "8": 0.0287,
+      "9": 0.0537
+     },
+     "reported_confidence": 0.2212
+    },
+    "latency_ms": 417.3,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "imp-08",
+    "variant": "abstain",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.558,
+     "top_p": 0.6846,
+     "entropy": 0.442,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.6846,
+     "probabilities": {
+      "0": 0.1731,
+      "1": 0.0496,
+      "2": 0.0234,
+      "3": 0.0046,
+      "4": 0.0036,
+      "5": 0.0013,
+      "6": 0.0025,
+      "7": 0.0025,
+      "8": 0.0052,
+      "9": 0.0496,
+      "insufficient_evidence": 0.6846
+     },
+     "reported_confidence": 0.558
+    },
+    "latency_ms": 509.7,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "imp-09",
+    "variant": "base",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "candidate_a",
+     "confidence": 0.3155,
+     "top_p": 0.7361,
+     "entropy": 0.6845,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "candidate_a": 0.7361,
+      "candidate_b": 0.0996,
+      "candidate_c": 0.1643
+     },
+     "reported_confidence": 0.3155
+    },
+    "latency_ms": 411.8,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "imp-09",
+    "variant": "abstain",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.9853,
+     "top_p": 0.9973,
+     "entropy": 0.0142,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.9973,
+     "probabilities": {
+      "candidate_a": 0.0025,
+      "candidate_b": 0.0002,
+      "candidate_c": 0.0001,
+      "insufficient_evidence": 0.9973
+     },
+     "reported_confidence": 0.9858
+    },
+    "latency_ms": 407.9,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "imp-10",
+    "variant": "base",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 0.1312,
+     "confidence": 0.6799,
+     "entropy": 0.3201,
+     "confident": true,
+     "probabilities": {
+      "Under 1 hour": 0.9143,
+      "1 to 4 hours": 0.0402,
+      "Over 4 hours": 0.0455
+     },
+     "reported_confidence": 0.6799
+    },
+    "latency_ms": 372.3,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "imp-10",
+    "variant": "abstain",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.9767,
+     "top_p": 0.9955,
+     "entropy": 0.0234,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.9955,
+     "probabilities": {
+      "insufficient_evidence": 0.9955,
+      "level_0": 0.0032,
+      "level_1": 0.0009,
+      "level_2": 0.0004
+     },
+     "reported_confidence": 0.9766
+    },
+    "latency_ms": 399.6,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "con-01",
+    "variant": "base",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.0601,
+     "certainty": 0.8798,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.0601,
+      "no": 0.9399
+     }
+    },
+    "latency_ms": 385.7,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "con-01",
+    "variant": "abstain",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "no",
+     "confidence": 0.6912,
+     "top_p": 0.9068,
+     "entropy": 0.3088,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0089,
+     "probabilities": {
+      "insufficient_evidence": 0.0089,
+      "no": 0.9068,
+      "yes": 0.0843
+     },
+     "reported_confidence": 0.6912
+    },
+    "latency_ms": 357.9,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "con-02",
+    "variant": "base",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.0421,
+     "certainty": 0.9158,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.0421,
+      "no": 0.9579
+     }
+    },
+    "latency_ms": 385.8,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "con-02",
+    "variant": "abstain",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "no",
+     "confidence": 0.8271,
+     "top_p": 0.9578,
+     "entropy": 0.1731,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.005,
+     "probabilities": {
+      "insufficient_evidence": 0.005,
+      "no": 0.9578,
+      "yes": 0.0371
+     },
+     "reported_confidence": 0.8269
+    },
+    "latency_ms": 398.3,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "con-03",
+    "variant": "base",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "berlin",
+     "confidence": 0.4979,
+     "top_p": 0.8149,
+     "entropy": 0.502,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "berlin": 0.8149,
+      "london": 0.1605,
+      "paris": 0.0246
+     },
+     "reported_confidence": 0.498
+    },
+    "latency_ms": 400.2,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "con-03",
+    "variant": "abstain",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "berlin",
+     "confidence": 0.2945,
+     "top_p": 0.6083,
+     "entropy": 0.7054,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": 0.2536,
+     "probabilities": {
+      "berlin": 0.6083,
+      "insufficient_evidence": 0.2536,
+      "london": 0.1198,
+      "paris": 0.0184
+     },
+     "reported_confidence": 0.2946
+    },
+    "latency_ms": 370.4,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "con-04",
+    "variant": "base",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "two",
+     "confidence": 0.5136,
+     "top_p": 0.7769,
+     "entropy": 0.4863,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "one": 0.2226,
+      "three": 0.0005,
+      "two": 0.7769
+     },
+     "reported_confidence": 0.5137
+    },
+    "latency_ms": 470.6,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "con-04",
+    "variant": "abstain",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "two",
+     "confidence": 0.5604,
+     "top_p": 0.7055,
+     "entropy": 0.44,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0001,
+     "probabilities": {
+      "insufficient_evidence": 0.0001,
+      "one": 0.2941,
+      "three": 0.0003,
+      "two": 0.7055
+     },
+     "reported_confidence": 0.56
+    },
+    "latency_ms": 400.8,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "con-05",
+    "variant": "base",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 0.0685,
+     "confidence": 0.7689,
+     "entropy": 0.2313,
+     "confident": true,
+     "probabilities": {
+      "Routine": 0.9358,
+      "Soon": 0.0598,
+      "Urgent: same day": 0.0043
+     },
+     "reported_confidence": 0.7687
+    },
+    "latency_ms": 423.8,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "con-05",
+    "variant": "abstain",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "level_0",
+     "confidence": 0.8205,
+     "top_p": 0.9371,
+     "entropy": 0.1796,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.001,
+     "probabilities": {
+      "insufficient_evidence": 0.001,
+      "level_0": 0.9371,
+      "level_1": 0.0599,
+      "level_2": 0.002
+     },
+     "reported_confidence": 0.8204
+    },
+    "latency_ms": 388.6,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "bait-01",
+    "variant": "base",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.9149,
+     "certainty": 0.8298,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.9149,
+      "no": 0.0851
+     }
+    },
+    "latency_ms": 468.0,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "bait-01",
+    "variant": "abstain",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "yes",
+     "confidence": 0.9434,
+     "top_p": 0.9901,
+     "entropy": 0.0568,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0059,
+     "probabilities": {
+      "insufficient_evidence": 0.0059,
+      "no": 0.004,
+      "yes": 0.9901
+     },
+     "reported_confidence": 0.9432
+    },
+    "latency_ms": 385.4,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "bait-02",
+    "variant": "base",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.0046,
+     "certainty": 0.9908,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.0046,
+      "no": 0.9954
+     }
+    },
+    "latency_ms": 397.5,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "bait-02",
+    "variant": "abstain",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.6518,
+     "top_p": 0.904,
+     "entropy": 0.3482,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.904,
+     "probabilities": {
+      "insufficient_evidence": 0.904,
+      "no": 0.045,
+      "yes": 0.051
+     },
+     "reported_confidence": 0.6518
+    },
+    "latency_ms": 410.1,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "bait-03",
+    "variant": "base",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "billing",
+     "confidence": 0.9711,
+     "top_p": 0.9955,
+     "entropy": 0.0289,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "billing": 0.9955,
+      "sales": 0.0017,
+      "technical": 0.0028
+     },
+     "reported_confidence": 0.9711
+    },
+    "latency_ms": 444.5,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "bait-03",
+    "variant": "abstain",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "billing",
+     "confidence": 0.9671,
+     "top_p": 0.9937,
+     "entropy": 0.0326,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0017,
+     "probabilities": {
+      "billing": 0.9937,
+      "insufficient_evidence": 0.0017,
+      "sales": 0.0022,
+      "technical": 0.0025
+     },
+     "reported_confidence": 0.9674
+    },
+    "latency_ms": 384.0,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "bait-04",
+    "variant": "base",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.3775,
+     "certainty": 0.2449,
+     "confident": false,
+     "probabilities": {
+      "yes": 0.3775,
+      "no": 0.6225
+     }
+    },
+    "latency_ms": 414.3,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "bait-04",
+    "variant": "abstain",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.8295,
+     "top_p": 0.9561,
+     "entropy": 0.1708,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.9561,
+     "probabilities": {
+      "insufficient_evidence": 0.9561,
+      "no": 0.0018,
+      "yes": 0.042
+     },
+     "reported_confidence": 0.8292
+    },
+    "latency_ms": 392.3,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "bait-05",
+    "variant": "base",
+    "category": "confidence_bait",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.0373,
+     "certainty": 0.9253,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.0373,
+      "no": 0.9627
+     },
+     "correct": true,
+     "brier": 0.0014
+    },
+    "latency_ms": 446.9,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "bait-05",
+    "variant": "abstain",
+    "category": "confidence_bait",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "no",
+     "confidence": 0.8578,
+     "top_p": 0.9655,
+     "entropy": 0.142,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0015,
+     "probabilities": {
+      "insufficient_evidence": 0.0015,
+      "no": 0.9655,
+      "yes": 0.033
+     },
+     "correct": true,
+     "reported_confidence": 0.858
+    },
+    "latency_ms": 379.8,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "irr-01",
+    "variant": "base",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.0759,
+     "certainty": 0.8483,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.0759,
+      "no": 0.9241
+     }
+    },
+    "latency_ms": 440.2,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "irr-01",
+    "variant": "abstain",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.7541,
+     "top_p": 0.9395,
+     "entropy": 0.246,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.9395,
+     "probabilities": {
+      "insufficient_evidence": 0.9395,
+      "no": 0.0321,
+      "yes": 0.0284
+     },
+     "reported_confidence": 0.754
+    },
+    "latency_ms": 384.9,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "irr-02",
+    "variant": "base",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "technical",
+     "confidence": 0.0394,
+     "top_p": 0.4442,
+     "entropy": 0.9606,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "billing": 0.346,
+      "sales": 0.2098,
+      "technical": 0.4442
+     },
+     "reported_confidence": 0.0394
+    },
+    "latency_ms": 435.6,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "irr-02",
+    "variant": "abstain",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.8559,
+     "top_p": 0.9566,
+     "entropy": 0.1444,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.9566,
+     "probabilities": {
+      "billing": 0.0371,
+      "insufficient_evidence": 0.9566,
+      "sales": 0.0018,
+      "technical": 0.0044
+     },
+     "reported_confidence": 0.8556
+    },
+    "latency_ms": 406.7,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "irr-03",
+    "variant": "base",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 0.1641,
+     "confidence": 0.6055,
+     "entropy": 0.3944,
+     "confident": true,
+     "probabilities": {
+      "Routine": 0.8859,
+      "Soon": 0.0642,
+      "Urgent: same day": 0.05
+     },
+     "reported_confidence": 0.6056
+    },
+    "latency_ms": 383.2,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "irr-03",
+    "variant": "abstain",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.7616,
+     "top_p": 0.9209,
+     "entropy": 0.2383,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.9209,
+     "probabilities": {
+      "insufficient_evidence": 0.9209,
+      "level_0": 0.0589,
+      "level_1": 0.0169,
+      "level_2": 0.0033
+     },
+     "reported_confidence": 0.7617
+    },
+    "latency_ms": 437.2,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "irr-04",
+    "variant": "base",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.6514,
+     "certainty": 0.3027,
+     "confident": false,
+     "probabilities": {
+      "yes": 0.6514,
+      "no": 0.3486
+     }
+    },
+    "latency_ms": 410.0,
+    "model": "semif-qwen3.5-4b"
+   },
+   {
+    "id": "irr-04",
+    "variant": "abstain",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.4003,
+     "top_p": 0.7638,
+     "entropy": 0.5997,
+     "confident": false,
+     "abstained": true,
+     "abstain_p": 0.7638,
+     "probabilities": {
+      "insufficient_evidence": 0.7638,
+      "no": 0.0431,
+      "yes": 0.1931
+     },
+     "reported_confidence": 0.4003
+    },
+    "latency_ms": 409.4,
+    "model": "semif-qwen3.5-4b"
+   }
+  ]
+ },
+ "gateway:typesafe/jev-1.13.0": {
+  "spec": "gateway:typesafe/jev-1.13.0",
+  "model": "jev-1.13.0",
+  "n_items": 48,
+  "summary": {
+   "categories": {
+    "answerable": {
+     "n": 14,
+     "mean_certainty": 0.978,
+     "overconfidence_rate": null,
+     "underconfidence_rate": 0.0,
+     "accuracy": 1.0,
+     "brier": 0.0004,
+     "error_vs_base_rate": null,
+     "mean_latency_ms": 480.5,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": null,
+      "false_abstain_rate_when_answerable": 0.0,
+      "accuracy_when_answerable": 1.0,
+      "still_overconfident_rate": null
+     }
+    },
+    "confidence_bait": {
+     "n": 5,
+     "mean_certainty": 0.668,
+     "overconfidence_rate": 0.75,
+     "underconfidence_rate": 0.0,
+     "accuracy": 1.0,
+     "brier": 0.0016,
+     "error_vs_base_rate": null,
+     "mean_latency_ms": 450.8,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": 0.25,
+      "false_abstain_rate_when_answerable": 0.0,
+      "accuracy_when_answerable": 1.0,
+      "still_overconfident_rate": 0.25
+     }
+    },
+    "contradictory": {
+     "n": 5,
+     "mean_certainty": 0.696,
+     "overconfidence_rate": 0.6,
+     "underconfidence_rate": null,
+     "accuracy": null,
+     "brier": null,
+     "error_vs_base_rate": null,
+     "mean_latency_ms": 443.4,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": 0.2,
+      "false_abstain_rate_when_answerable": null,
+      "accuracy_when_answerable": null,
+      "still_overconfident_rate": 0.6
+     }
+    },
+    "impossible": {
+     "n": 5,
+     "mean_certainty": 0.322,
+     "overconfidence_rate": 0.4,
+     "underconfidence_rate": null,
+     "accuracy": null,
+     "brier": null,
+     "error_vs_base_rate": null,
+     "mean_latency_ms": 434.5,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": 1.0,
+      "false_abstain_rate_when_answerable": null,
+      "accuracy_when_answerable": null,
+      "still_overconfident_rate": 0.0
+     }
+    },
+    "insufficient_evidence": {
+     "n": 10,
+     "mean_certainty": 0.444,
+     "overconfidence_rate": 0.3,
+     "underconfidence_rate": null,
+     "accuracy": null,
+     "brier": null,
+     "error_vs_base_rate": null,
+     "mean_latency_ms": 418.0,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": 1.0,
+      "false_abstain_rate_when_answerable": null,
+      "accuracy_when_answerable": null,
+      "still_overconfident_rate": 0.0
+     }
+    },
+    "irrelevant_state": {
+     "n": 4,
+     "mean_certainty": 0.72,
+     "overconfidence_rate": 0.75,
+     "underconfidence_rate": null,
+     "accuracy": null,
+     "brier": null,
+     "error_vs_base_rate": null,
+     "mean_latency_ms": 454.4,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": 1.0,
+      "false_abstain_rate_when_answerable": null,
+      "accuracy_when_answerable": null,
+      "still_overconfident_rate": 0.0
+     }
+    },
+    "known_base_rate": {
+     "n": 5,
+     "mean_certainty": 0.456,
+     "overconfidence_rate": 0.0,
+     "underconfidence_rate": 0.0,
+     "accuracy": 1.0,
+     "brier": 0.0367,
+     "error_vs_base_rate": 0.104,
+     "mean_latency_ms": 430.2,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": 1.0,
+      "false_abstain_rate_when_answerable": 0.667,
+      "accuracy_when_answerable": 0.333,
+      "still_overconfident_rate": 0.0
+     }
+    }
+   },
+   "overall": {
+    "uncertain_items": 30,
+    "overconfidence_rate_base": 0.467,
+    "abstain_rate_with_option": 0.767,
+    "still_overconfident_with_option": 0.133,
+    "false_abstain_rate_answerable": 0.111,
+    "accuracy_answerable_with_option": 0.889,
+    "separation": 0.427,
+    "median_latency_ms": 433.4,
+    "errors": 0
+   },
+   "reliability_noul": {
+    "0.0-0.2": {
+     "n": 6,
+     "mean_p": 0.047,
+     "observed_true": 0.0
+    },
+    "0.2-0.4": {
+     "n": 1,
+     "mean_p": 0.29,
+     "observed_true": 0.0
+    },
+    "0.8-1.0": {
+     "n": 4,
+     "mean_p": 0.98,
+     "observed_true": 1.0
+    }
+   }
+  },
+  "rows": [
+   {
+    "id": "ans-01",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.99,
+     "certainty": 0.98,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.99,
+      "no": 0.01
+     },
+     "correct": true,
+     "brier": 0.0001
+    },
+    "latency_ms": 584.3,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-01",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "yes",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "yes": 1.0,
+      "no": 0.0,
+      "insufficient_evidence": 0.0
+     },
+     "correct": true,
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 664.8,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-02",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.95,
+     "certainty": 0.9,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.95,
+      "no": 0.05
+     },
+     "correct": true,
+     "brier": 0.0025
+    },
+    "latency_ms": 455.1,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-02",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "yes",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "yes": 1.0,
+      "insufficient_evidence": 0.0,
+      "no": 0.0
+     },
+     "correct": true,
+     "reported_confidence": 0.99
+    },
+    "latency_ms": 441.3,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-03",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.01,
+     "certainty": 0.98,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.01,
+      "no": 0.99
+     },
+     "correct": true,
+     "brier": 0.0001
+    },
+    "latency_ms": 404.4,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-03",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "no",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "no": 1.0,
+      "yes": 0.0,
+      "insufficient_evidence": 0.0
+     },
+     "correct": true,
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 517.4,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-04",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.99,
+     "certainty": 0.98,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.99,
+      "no": 0.01
+     },
+     "correct": true,
+     "brier": 0.0001
+    },
+    "latency_ms": 409.3,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-04",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "yes",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "yes": 1.0,
+      "insufficient_evidence": 0.0,
+      "no": 0.0
+     },
+     "correct": true,
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 513.0,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-05",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.01,
+     "certainty": 0.98,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.01,
+      "no": 0.99
+     },
+     "correct": true,
+     "brier": 0.0001
+    },
+    "latency_ms": 408.3,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-05",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "no",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "yes": 0.0,
+      "no": 1.0,
+      "insufficient_evidence": 0.0
+     },
+     "correct": true,
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 406.2,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-06",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.99,
+     "certainty": 0.98,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.99,
+      "no": 0.01
+     },
+     "correct": true,
+     "brier": 0.0001
+    },
+    "latency_ms": 514.7,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-06",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "yes",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "yes": 1.0,
+      "insufficient_evidence": 0.0,
+      "no": 0.0
+     },
+     "correct": true,
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 405.9,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-07",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.01,
+     "certainty": 0.98,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.01,
+      "no": 0.99
+     },
+     "correct": true,
+     "brier": 0.0001
+    },
+    "latency_ms": 434.8,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-07",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "no",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "insufficient_evidence": 0.0,
+      "yes": 0.0,
+      "no": 1.0
+     },
+     "correct": true,
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 382.6,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-08",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "german",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "german",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "french": 0.0,
+      "english": 0.0,
+      "spanish": 0.0,
+      "german": 1.0
+     },
+     "correct": true,
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 518.0,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-08",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "german",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "german",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "french": 0.0,
+      "english": 0.0,
+      "german": 1.0,
+      "insufficient_evidence": 0.0,
+      "spanish": 0.0
+     },
+     "correct": true,
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 510.7,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-09",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "statement",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "statement",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "address_change": 0.0,
+      "complaint": 0.0,
+      "refund": 0.0,
+      "statement": 1.0
+     },
+     "correct": true,
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 527.0,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-09",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "statement",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "statement",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "insufficient_evidence": 0.0,
+      "statement": 1.0,
+      "address_change": 0.0,
+      "refund": 0.0,
+      "complaint": 0.0
+     },
+     "correct": true,
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 497.2,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-10",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "b",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "b",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "a": 0.0,
+      "c": 0.0,
+      "b": 1.0
+     },
+     "correct": true,
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 408.6,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-10",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "b",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "b",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "c": 0.0,
+      "a": 0.0,
+      "insufficient_evidence": 0.0,
+      "b": 1.0
+     },
+     "correct": true,
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 411.5,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-11",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "technical",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "technical",
+     "confidence": 0.9108,
+     "top_p": 0.98,
+     "entropy": 0.0892,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "sales": 0.0,
+      "technical": 0.98,
+      "billing": 0.02
+     },
+     "correct": true,
+     "reported_confidence": 0.97
+    },
+    "latency_ms": 535.7,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-11",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "technical",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "technical",
+     "confidence": 0.9293,
+     "top_p": 0.98,
+     "entropy": 0.0707,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "technical": 0.98,
+      "insufficient_evidence": 0.0,
+      "billing": 0.02,
+      "sales": 0.0
+     },
+     "correct": true,
+     "reported_confidence": 0.98
+    },
+    "latency_ms": 602.5,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-12",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": 2,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 2.0,
+     "confidence": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "probabilities": {
+      "Routine": 0.0,
+      "Soon": 0.0,
+      "Urgent: same day": 1.0
+     },
+     "correct": true,
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 498.2,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-12",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": 2,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "level_2",
+     "confidence": 0.9193,
+     "top_p": 0.98,
+     "entropy": 0.0807,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.01,
+     "probabilities": {
+      "insufficient_evidence": 0.01,
+      "level_0": 0.0,
+      "level_2": 0.98,
+      "level_1": 0.01
+     },
+     "correct": true,
+     "reported_confidence": 0.98
+    },
+    "latency_ms": 514.5,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-13",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": 2,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 2.0,
+     "confidence": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "probabilities": {
+      "Negative": 0.0,
+      "Neutral": 0.0,
+      "Positive": 1.0
+     },
+     "correct": true,
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 509.9,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-13",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": 2,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "level_2",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "level_0": 0.0,
+      "level_1": 0.0,
+      "insufficient_evidence": 0.0,
+      "level_2": 1.0
+     },
+     "correct": true,
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 393.5,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-14",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": 0,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 0.0,
+     "confidence": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "probabilities": {
+      "Negative": 1.0,
+      "Neutral": 0.0,
+      "Positive": 0.0
+     },
+     "correct": true,
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 518.8,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ans-14",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": 0,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "level_0",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "level_2": 0.0,
+      "insufficient_evidence": 0.0,
+      "level_1": 0.0,
+      "level_0": 1.0
+     },
+     "correct": true,
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 419.8,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ins-01",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.43,
+     "certainty": 0.14,
+     "confident": false,
+     "probabilities": {
+      "yes": 0.43,
+      "no": 0.57
+     }
+    },
+    "latency_ms": 399.7,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ins-01",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "yes": 0.0,
+      "insufficient_evidence": 1.0,
+      "no": 0.0
+     },
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 521.5,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ins-02",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.52,
+     "certainty": 0.04,
+     "confident": false,
+     "probabilities": {
+      "yes": 0.52,
+      "no": 0.48
+     }
+    },
+    "latency_ms": 409.4,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ins-02",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "insufficient_evidence": 1.0,
+      "yes": 0.0,
+      "no": 0.0
+     },
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 506.1,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ins-03",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.52,
+     "certainty": 0.04,
+     "confident": false,
+     "probabilities": {
+      "yes": 0.52,
+      "no": 0.48
+     }
+    },
+    "latency_ms": 424.9,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ins-03",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "insufficient_evidence": 1.0,
+      "yes": 0.0,
+      "no": 0.0
+     },
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 541.1,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ins-04",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.14,
+     "certainty": 0.72,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.14,
+      "no": 0.86
+     }
+    },
+    "latency_ms": 380.2,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ins-04",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.949,
+     "top_p": 0.99,
+     "entropy": 0.051,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.99,
+     "probabilities": {
+      "yes": 0.0,
+      "no": 0.01,
+      "insufficient_evidence": 0.99
+     },
+     "reported_confidence": 0.99
+    },
+    "latency_ms": 377.0,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ins-05",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "hr",
+     "confidence": 0.3587,
+     "top_p": 0.64,
+     "entropy": 0.6413,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "engineering": 0.28,
+      "hr": 0.64,
+      "sales": 0.02,
+      "finance": 0.06
+     },
+     "reported_confidence": 0.52
+    },
+    "latency_ms": 431.9,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ins-05",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "finance": 0.0,
+      "insufficient_evidence": 1.0,
+      "sales": 0.0,
+      "engineering": 0.0,
+      "hr": 0.0
+     },
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 511.2,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ins-06",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "technical",
+     "confidence": 0.421,
+     "top_p": 0.72,
+     "entropy": 0.579,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "technical": 0.72,
+      "sales": 0.27,
+      "billing": 0.01
+     },
+     "reported_confidence": 0.58
+    },
+    "latency_ms": 411.5,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ins-06",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "sales": 0.0,
+      "technical": 0.0,
+      "billing": 0.0,
+      "insufficient_evidence": 1.0
+     },
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 511.2,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ins-07",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "black",
+     "confidence": 0.3512,
+     "top_p": 0.56,
+     "entropy": 0.6488,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "black": 0.56,
+      "white": 0.38,
+      "red": 0.04,
+      "blue": 0.02
+     },
+     "reported_confidence": 0.42
+    },
+    "latency_ms": 511.2,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ins-07",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "red": 0.0,
+      "insufficient_evidence": 1.0,
+      "black": 0.0,
+      "white": 0.0,
+      "blue": 0.0
+     },
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 512.6,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ins-08",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "draw",
+     "confidence": 0.8774,
+     "top_p": 0.97,
+     "entropy": 0.1226,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "home": 0.03,
+      "away": 0.0,
+      "draw": 0.97
+     },
+     "reported_confidence": 0.96
+    },
+    "latency_ms": 409.2,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ins-08",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "home": 0.0,
+      "draw": 0.0,
+      "insufficient_evidence": 1.0,
+      "away": 0.0
+     },
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 511.2,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ins-09",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 1.0,
+     "confidence": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "probabilities": {
+      "Dissatisfied": 0.0,
+      "Neutral": 1.0,
+      "Satisfied": 0.0
+     },
+     "reported_confidence": 0.99
+    },
+    "latency_ms": 392.9,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ins-09",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "level_1": 0.0,
+      "level_2": 0.0,
+      "level_0": 0.0,
+      "insufficient_evidence": 1.0
+     },
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 427.9,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ins-10",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 0.26,
+     "confidence": 0.4881,
+     "entropy": 0.5119,
+     "confident": false,
+     "probabilities": {
+      "Minor": 0.75,
+      "Moderate": 0.25,
+      "Severe": 0.0
+     },
+     "reported_confidence": 0.6
+    },
+    "latency_ms": 409.2,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "ins-10",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "insufficient_evidence": 1.0,
+      "level_2": 0.0,
+      "level_1": 0.0,
+      "level_0": 0.0
+     },
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 410.3,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "imp-01",
+    "variant": "base",
+    "category": "known_base_rate",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.42,
+     "certainty": 0.16,
+     "confident": false,
+     "probabilities": {
+      "yes": 0.42,
+      "no": 0.58
+     },
+     "calibrated_p": 0.5,
+     "error_vs_base_rate": 0.08
+    },
+    "latency_ms": 425.7,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "imp-01",
+    "variant": "abstain",
+    "category": "known_base_rate",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "insufficient_evidence": 1.0,
+      "no": 0.0,
+      "yes": 0.0
+     },
+     "reported_confidence": 0.99
+    },
+    "latency_ms": 452.1,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "imp-02",
+    "variant": "base",
+    "category": "known_base_rate",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.06,
+     "certainty": 0.88,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.06,
+      "no": 0.94
+     },
+     "correct": true,
+     "brier": 0.0036,
+     "calibrated_p": 1e-06,
+     "error_vs_base_rate": 0.06
+    },
+    "latency_ms": 411.6,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "imp-02",
+    "variant": "abstain",
+    "category": "known_base_rate",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.949,
+     "top_p": 0.99,
+     "entropy": 0.051,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.99,
+     "probabilities": {
+      "insufficient_evidence": 0.99,
+      "no": 0.01,
+      "yes": 0.0
+     },
+     "correct": false,
+     "reported_confidence": 0.99
+    },
+    "latency_ms": 401.1,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "imp-03",
+    "variant": "base",
+    "category": "known_base_rate",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.15,
+     "certainty": 0.7,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.15,
+      "no": 0.85
+     },
+     "correct": true,
+     "brier": 0.0225,
+     "calibrated_p": 0.0,
+     "error_vs_base_rate": 0.15
+    },
+    "latency_ms": 458.2,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "imp-03",
+    "variant": "abstain",
+    "category": "known_base_rate",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "no",
+     "confidence": 0.5791,
+     "top_p": 0.86,
+     "entropy": 0.4209,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.02,
+     "probabilities": {
+      "yes": 0.12,
+      "insufficient_evidence": 0.02,
+      "no": 0.86
+     },
+     "correct": true,
+     "reported_confidence": 0.79
+    },
+    "latency_ms": 387.8,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "imp-04",
+    "variant": "base",
+    "category": "known_base_rate",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.44,
+     "certainty": 0.12,
+     "confident": false,
+     "probabilities": {
+      "yes": 0.44,
+      "no": 0.56
+     },
+     "calibrated_p": 0.5,
+     "error_vs_base_rate": 0.06
+    },
+    "latency_ms": 379.9,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "imp-04",
+    "variant": "abstain",
+    "category": "known_base_rate",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "yes": 0.0,
+      "insufficient_evidence": 1.0,
+      "no": 0.0
+     },
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 394.3,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "imp-05",
+    "variant": "base",
+    "category": "known_base_rate",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.29,
+     "certainty": 0.42,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.29,
+      "no": 0.71
+     },
+     "correct": true,
+     "brier": 0.0841,
+     "calibrated_p": 0.122,
+     "error_vs_base_rate": 0.168
+    },
+    "latency_ms": 475.6,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "imp-05",
+    "variant": "abstain",
+    "category": "known_base_rate",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "no": 0.0,
+      "insufficient_evidence": 1.0,
+      "yes": 0.0
+     },
+     "correct": false,
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 440.6,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "imp-06",
+    "variant": "base",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "one",
+     "confidence": 0.7452,
+     "top_p": 0.9,
+     "entropy": 0.2548,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "four": 0.03,
+      "two": 0.01,
+      "one": 0.9,
+      "six": 0.03,
+      "three": 0.03,
+      "five": 0.0
+     },
+     "reported_confidence": 0.88
+    },
+    "latency_ms": 481.2,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "imp-06",
+    "variant": "abstain",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "one": 0.0,
+      "insufficient_evidence": 1.0,
+      "two": 0.0,
+      "four": 0.0,
+      "six": 0.0,
+      "three": 0.0,
+      "five": 0.0
+     },
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 410.8,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "imp-07",
+    "variant": "base",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "spades",
+     "confidence": 0.164,
+     "top_p": 0.51,
+     "entropy": 0.836,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "diamonds": 0.08,
+      "hearts": 0.12,
+      "clubs": 0.29,
+      "spades": 0.51
+     },
+     "reported_confidence": 0.34
+    },
+    "latency_ms": 403.2,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "imp-07",
+    "variant": "abstain",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "spades": 0.0,
+      "insufficient_evidence": 1.0,
+      "clubs": 0.0,
+      "hearts": 0.0,
+      "diamonds": 0.0
+     },
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 412.6,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "imp-08",
+    "variant": "base",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "3",
+     "confidence": 0.0056,
+     "top_p": 0.13,
+     "entropy": 0.9944,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "6": 0.1,
+      "2": 0.08,
+      "5": 0.1,
+      "8": 0.08,
+      "0": 0.11,
+      "9": 0.1,
+      "3": 0.13,
+      "4": 0.1,
+      "1": 0.08,
+      "7": 0.12
+     },
+     "reported_confidence": 0.04
+    },
+    "latency_ms": 411.8,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "imp-08",
+    "variant": "abstain",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.2471,
+     "top_p": 0.51,
+     "entropy": 0.7529,
+     "confident": false,
+     "abstained": true,
+     "abstain_p": 0.51,
+     "probabilities": {
+      "4": 0.05,
+      "8": 0.05,
+      "1": 0.03,
+      "9": 0.04,
+      "5": 0.05,
+      "0": 0.05,
+      "insufficient_evidence": 0.51,
+      "3": 0.07,
+      "2": 0.03,
+      "7": 0.06,
+      "6": 0.06
+     },
+     "reported_confidence": 0.47
+    },
+    "latency_ms": 369.0,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "imp-09",
+    "variant": "base",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "candidate_a",
+     "confidence": 0.5006,
+     "top_p": 0.83,
+     "entropy": 0.4994,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "candidate_c": 0.13,
+      "candidate_b": 0.04,
+      "candidate_a": 0.83
+     },
+     "reported_confidence": 0.73
+    },
+    "latency_ms": 437.5,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "imp-09",
+    "variant": "abstain",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "candidate_a": 0.0,
+      "candidate_c": 0.0,
+      "insufficient_evidence": 1.0,
+      "candidate_b": 0.0
+     },
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 408.5,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "imp-10",
+    "variant": "base",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 0.52,
+     "confidence": 0.1934,
+     "entropy": 0.8066,
+     "confident": false,
+     "probabilities": {
+      "Under 1 hour": 0.54,
+      "1 to 4 hours": 0.39,
+      "Over 4 hours": 0.07
+     },
+     "reported_confidence": 0.21
+    },
+    "latency_ms": 439.0,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "imp-10",
+    "variant": "abstain",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "level_0": 0.0,
+      "level_2": 0.0,
+      "level_1": 0.0,
+      "insufficient_evidence": 1.0
+     },
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 496.7,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "con-01",
+    "variant": "base",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.31,
+     "certainty": 0.38,
+     "confident": false,
+     "probabilities": {
+      "yes": 0.31,
+      "no": 0.69
+     }
+    },
+    "latency_ms": 471.1,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "con-01",
+    "variant": "abstain",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.3349,
+     "top_p": 0.64,
+     "entropy": 0.6651,
+     "confident": false,
+     "abstained": true,
+     "abstain_p": 0.64,
+     "probabilities": {
+      "yes": 0.02,
+      "insufficient_evidence": 0.64,
+      "no": 0.34
+     },
+     "reported_confidence": 0.46
+    },
+    "latency_ms": 393.8,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "con-02",
+    "variant": "base",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.38,
+     "certainty": 0.24,
+     "confident": false,
+     "probabilities": {
+      "yes": 0.38,
+      "no": 0.62
+     }
+    },
+    "latency_ms": 439.8,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "con-02",
+    "variant": "abstain",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "no",
+     "confidence": 0.1966,
+     "top_p": 0.55,
+     "entropy": 0.8034,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": 0.38,
+     "probabilities": {
+      "insufficient_evidence": 0.38,
+      "yes": 0.07,
+      "no": 0.55
+     },
+     "reported_confidence": 0.33
+    },
+    "latency_ms": 384.3,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "con-03",
+    "variant": "base",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "berlin",
+     "confidence": 0.949,
+     "top_p": 0.99,
+     "entropy": 0.051,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "london": 0.01,
+      "berlin": 0.99,
+      "paris": 0.0
+     },
+     "reported_confidence": 0.98
+    },
+    "latency_ms": 460.3,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "con-03",
+    "variant": "abstain",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "berlin",
+     "confidence": 0.5723,
+     "top_p": 0.72,
+     "entropy": 0.4277,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.28,
+     "probabilities": {
+      "berlin": 0.72,
+      "london": 0.0,
+      "paris": 0.0,
+      "insufficient_evidence": 0.28
+     },
+     "reported_confidence": 0.63
+    },
+    "latency_ms": 390.8,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "con-04",
+    "variant": "base",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "two",
+     "confidence": 0.9108,
+     "top_p": 0.98,
+     "entropy": 0.0892,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "two": 0.98,
+      "one": 0.0,
+      "three": 0.02
+     },
+     "reported_confidence": 0.96
+    },
+    "latency_ms": 428.2,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "con-04",
+    "variant": "abstain",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "two",
+     "confidence": 0.8388,
+     "top_p": 0.95,
+     "entropy": 0.1612,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.04,
+     "probabilities": {
+      "insufficient_evidence": 0.04,
+      "three": 0.01,
+      "one": 0.0,
+      "two": 0.95
+     },
+     "reported_confidence": 0.94
+    },
+    "latency_ms": 396.2,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "con-05",
+    "variant": "base",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 0.01,
+     "confidence": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "probabilities": {
+      "Routine": 1.0,
+      "Soon": 0.0,
+      "Urgent: same day": 0.0
+     },
+     "reported_confidence": 0.98
+    },
+    "latency_ms": 417.4,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "con-05",
+    "variant": "abstain",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "level_0",
+     "confidence": 0.8789,
+     "top_p": 0.96,
+     "entropy": 0.1211,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.04,
+     "probabilities": {
+      "level_2": 0.0,
+      "level_1": 0.0,
+      "insufficient_evidence": 0.04,
+      "level_0": 0.96
+     },
+     "reported_confidence": 0.94
+    },
+    "latency_ms": 415.0,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "bait-01",
+    "variant": "base",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.72,
+     "certainty": 0.44,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.72,
+      "no": 0.28
+     }
+    },
+    "latency_ms": 420.5,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "bait-01",
+    "variant": "abstain",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "yes",
+     "confidence": 0.382,
+     "top_p": 0.67,
+     "entropy": 0.618,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": 0.32,
+     "probabilities": {
+      "yes": 0.67,
+      "insufficient_evidence": 0.32,
+      "no": 0.01
+     },
+     "reported_confidence": 0.5
+    },
+    "latency_ms": 501.4,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "bait-02",
+    "variant": "base",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.12,
+     "certainty": 0.76,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.12,
+      "no": 0.88
+     }
+    },
+    "latency_ms": 470.8,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "bait-02",
+    "variant": "abstain",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "no",
+     "confidence": 0.372,
+     "top_p": 0.54,
+     "entropy": 0.628,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": 0.46,
+     "probabilities": {
+      "insufficient_evidence": 0.46,
+      "yes": 0.0,
+      "no": 0.54
+     },
+     "reported_confidence": 0.31
+    },
+    "latency_ms": 449.5,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "bait-03",
+    "variant": "base",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "billing",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "billing": 1.0,
+      "sales": 0.0,
+      "technical": 0.0
+     },
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 409.8,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "bait-03",
+    "variant": "abstain",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "billing",
+     "confidence": 0.9028,
+     "top_p": 0.97,
+     "entropy": 0.0972,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.03,
+     "probabilities": {
+      "technical": 0.0,
+      "sales": 0.0,
+      "insufficient_evidence": 0.03,
+      "billing": 0.97
+     },
+     "reported_confidence": 0.96
+    },
+    "latency_ms": 379.2,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "bait-04",
+    "variant": "base",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.39,
+     "certainty": 0.22,
+     "confident": false,
+     "probabilities": {
+      "yes": 0.39,
+      "no": 0.61
+     }
+    },
+    "latency_ms": 440.2,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "bait-04",
+    "variant": "abstain",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "no": 0.0,
+      "yes": 0.0,
+      "insufficient_evidence": 1.0
+     },
+     "reported_confidence": 0.99
+    },
+    "latency_ms": 512.3,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "bait-05",
+    "variant": "base",
+    "category": "confidence_bait",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.04,
+     "certainty": 0.92,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.04,
+      "no": 0.96
+     },
+     "correct": true,
+     "brier": 0.0016
+    },
+    "latency_ms": 512.9,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "bait-05",
+    "variant": "abstain",
+    "category": "confidence_bait",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "no",
+     "confidence": 0.7688,
+     "top_p": 0.94,
+     "entropy": 0.2312,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.01,
+     "probabilities": {
+      "no": 0.94,
+      "insufficient_evidence": 0.01,
+      "yes": 0.05
+     },
+     "correct": true,
+     "reported_confidence": 0.92
+    },
+    "latency_ms": 387.7,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "irr-01",
+    "variant": "base",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.09,
+     "certainty": 0.82,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.09,
+      "no": 0.91
+     }
+    },
+    "latency_ms": 431.3,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "irr-01",
+    "variant": "abstain",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.949,
+     "top_p": 0.99,
+     "entropy": 0.051,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.99,
+     "probabilities": {
+      "no": 0.01,
+      "insufficient_evidence": 0.99,
+      "yes": 0.0
+     },
+     "reported_confidence": 0.98
+    },
+    "latency_ms": 409.2,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "irr-02",
+    "variant": "base",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "technical",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "technical": 1.0,
+      "billing": 0.0,
+      "sales": 0.0
+     },
+     "reported_confidence": 0.99
+    },
+    "latency_ms": 467.0,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "irr-02",
+    "variant": "abstain",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "insufficient_evidence": 1.0,
+      "technical": 0.0,
+      "billing": 0.0,
+      "sales": 0.0
+     },
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 557.4,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "irr-03",
+    "variant": "base",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 0.01,
+     "confidence": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "probabilities": {
+      "Routine": 1.0,
+      "Soon": 0.0,
+      "Urgent: same day": 0.0
+     },
+     "reported_confidence": 0.99
+    },
+    "latency_ms": 408.5,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "irr-03",
+    "variant": "abstain",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "level_0": 0.0,
+      "level_1": 0.0,
+      "insufficient_evidence": 1.0,
+      "level_2": 0.0
+     },
+     "reported_confidence": 1.0
+    },
+    "latency_ms": 410.7,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "irr-04",
+    "variant": "base",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.53,
+     "certainty": 0.06,
+     "confident": false,
+     "probabilities": {
+      "yes": 0.53,
+      "no": 0.47
+     }
+    },
+    "latency_ms": 510.6,
+    "model": "jev-1.13.0"
+   },
+   {
+    "id": "irr-04",
+    "variant": "abstain",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.3473,
+     "top_p": 0.66,
+     "entropy": 0.6527,
+     "confident": false,
+     "abstained": true,
+     "abstain_p": 0.66,
+     "probabilities": {
+      "insufficient_evidence": 0.66,
+      "yes": 0.32,
+      "no": 0.02
+     },
+     "reported_confidence": 0.49
+    },
+    "latency_ms": 512.2,
+    "model": "jev-1.13.0"
+   }
+  ]
+ },
+ "llm:claude-sonnet-5": {
+  "spec": "llm:claude-sonnet-5",
+  "model": "claude-sonnet-5",
+  "n_items": 48,
+  "summary": {
+   "categories": {
+    "answerable": {
+     "n": 14,
+     "mean_certainty": 0.928,
+     "overconfidence_rate": null,
+     "underconfidence_rate": 0.0,
+     "accuracy": 1.0,
+     "brier": 0.0005,
+     "error_vs_base_rate": null,
+     "mean_latency_ms": 1954.7,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": null,
+      "false_abstain_rate_when_answerable": 0.0,
+      "accuracy_when_answerable": 1.0,
+      "still_overconfident_rate": null
+     }
+    },
+    "confidence_bait": {
+     "n": 5,
+     "mean_certainty": 0.736,
+     "overconfidence_rate": 0.75,
+     "underconfidence_rate": 0.0,
+     "accuracy": 1.0,
+     "brier": 0.0,
+     "error_vs_base_rate": null,
+     "mean_latency_ms": 1506.2,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": 0.5,
+      "false_abstain_rate_when_answerable": 0.0,
+      "accuracy_when_answerable": 1.0,
+      "still_overconfident_rate": 0.25
+     }
+    },
+    "contradictory": {
+     "n": 5,
+     "mean_certainty": 0.192,
+     "overconfidence_rate": 0.2,
+     "underconfidence_rate": null,
+     "accuracy": null,
+     "brier": null,
+     "error_vs_base_rate": null,
+     "mean_latency_ms": 1473.4,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": 0.4,
+      "false_abstain_rate_when_answerable": null,
+      "accuracy_when_answerable": null,
+      "still_overconfident_rate": 0.0
+     }
+    },
+    "impossible": {
+     "n": 5,
+     "mean_certainty": 0.008,
+     "overconfidence_rate": 0.0,
+     "underconfidence_rate": null,
+     "accuracy": null,
+     "brier": null,
+     "error_vs_base_rate": null,
+     "mean_latency_ms": 1722.7,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": 0.6,
+      "false_abstain_rate_when_answerable": null,
+      "accuracy_when_answerable": null,
+      "still_overconfident_rate": 0.0
+     }
+    },
+    "insufficient_evidence": {
+     "n": 10,
+     "mean_certainty": 0.091,
+     "overconfidence_rate": 0.1,
+     "underconfidence_rate": null,
+     "accuracy": null,
+     "brier": null,
+     "error_vs_base_rate": null,
+     "mean_latency_ms": 1583.4,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": 1.0,
+      "false_abstain_rate_when_answerable": null,
+      "accuracy_when_answerable": null,
+      "still_overconfident_rate": 0.0
+     }
+    },
+    "irrelevant_state": {
+     "n": 4,
+     "mean_certainty": 0.318,
+     "overconfidence_rate": 0.25,
+     "underconfidence_rate": null,
+     "accuracy": null,
+     "brier": null,
+     "error_vs_base_rate": null,
+     "mean_latency_ms": 1777.6,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": 1.0,
+      "false_abstain_rate_when_answerable": null,
+      "accuracy_when_answerable": null,
+      "still_overconfident_rate": 0.0
+     }
+    },
+    "known_base_rate": {
+     "n": 5,
+     "mean_certainty": 0.543,
+     "overconfidence_rate": 0.0,
+     "underconfidence_rate": 0.0,
+     "accuracy": 1.0,
+     "brier": 0.0051,
+     "error_vs_base_rate": 0.004,
+     "mean_latency_ms": 1580.7,
+     "with_abstain_option": {
+      "abstain_rate_when_uncertain": 0.5,
+      "false_abstain_rate_when_answerable": 0.667,
+      "accuracy_when_answerable": 0.333,
+      "still_overconfident_rate": 0.0
+     }
+    }
+   },
+   "overall": {
+    "uncertain_items": 30,
+    "overconfidence_rate_base": 0.2,
+    "abstain_rate_with_option": 0.733,
+    "still_overconfident_with_option": 0.033,
+    "false_abstain_rate_answerable": 0.111,
+    "accuracy_answerable_with_option": 0.889,
+    "separation": 0.613,
+    "median_latency_ms": 1588.7,
+    "errors": 0
+   },
+   "reliability_noul": {
+    "0.0-0.2": {
+     "n": 7,
+     "mean_p": 0.026,
+     "observed_true": 0.0
+    },
+    "0.8-1.0": {
+     "n": 4,
+     "mean_p": 0.98,
+     "observed_true": 1.0
+    }
+   }
+  },
+  "rows": [
+   {
+    "id": "ans-01",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.98,
+     "certainty": 0.96,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.98,
+      "no": 0.02
+     },
+     "correct": true,
+     "brier": 0.0004
+    },
+    "latency_ms": 1801.7,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-01",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "yes",
+     "confidence": 0.86,
+     "reported_confidence": 0.95,
+     "top_p": 0.97,
+     "entropy": 0.14,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.01,
+     "probabilities": {
+      "yes": 0.97,
+      "no": 0.02,
+      "insufficient_evidence": 0.01
+     },
+     "correct": true
+    },
+    "latency_ms": 1484.8,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-02",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.95,
+     "certainty": 0.9,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.95,
+      "no": 0.05
+     },
+     "correct": true,
+     "brier": 0.0025
+    },
+    "latency_ms": 1125.0,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-02",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "yes",
+     "confidence": 0.7053,
+     "reported_confidence": 0.86,
+     "top_p": 0.92,
+     "entropy": 0.2947,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.06,
+     "probabilities": {
+      "yes": 0.92,
+      "no": 0.02,
+      "insufficient_evidence": 0.06
+     },
+     "correct": true
+    },
+    "latency_ms": 1433.7,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-03",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.02,
+     "certainty": 0.96,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.02,
+      "no": 0.98
+     },
+     "correct": true,
+     "brier": 0.0004
+    },
+    "latency_ms": 1430.7,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-03",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "no",
+     "confidence": 0.7887,
+     "reported_confidence": 0.92,
+     "top_p": 0.95,
+     "entropy": 0.2113,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.03,
+     "probabilities": {
+      "yes": 0.02,
+      "no": 0.95,
+      "insufficient_evidence": 0.03
+     },
+     "correct": true
+    },
+    "latency_ms": 1740.1,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-04",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 1.0,
+     "certainty": 1.0,
+     "confident": true,
+     "probabilities": {
+      "yes": 1.0,
+      "no": 0.0
+     },
+     "correct": true,
+     "brier": 0.0
+    },
+    "latency_ms": 1422.9,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-04",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "yes",
+     "confidence": 1.0,
+     "reported_confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "yes": 1.0,
+      "no": 0.0,
+      "insufficient_evidence": 0.0
+     },
+     "correct": true
+    },
+    "latency_ms": 1753.5,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-05",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.0,
+     "certainty": 1.0,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.0,
+      "no": 1.0
+     },
+     "correct": true,
+     "brier": 0.0
+    },
+    "latency_ms": 1481.5,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-05",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "no",
+     "confidence": 1.0,
+     "reported_confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "yes": 0.0,
+      "no": 1.0,
+      "insufficient_evidence": 0.0
+     },
+     "correct": true
+    },
+    "latency_ms": 1784.6,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-06",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.99,
+     "certainty": 0.98,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.99,
+      "no": 0.01
+     },
+     "correct": true,
+     "brier": 0.0001
+    },
+    "latency_ms": 1754.0,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-06",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": true,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "yes",
+     "confidence": 0.8981,
+     "reported_confidence": 0.97,
+     "top_p": 0.98,
+     "entropy": 0.1019,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.01,
+     "probabilities": {
+      "yes": 0.98,
+      "no": 0.01,
+      "insufficient_evidence": 0.01
+     },
+     "correct": true
+    },
+    "latency_ms": 3529.1,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-07",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.02,
+     "certainty": 0.96,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.02,
+      "no": 0.98
+     },
+     "correct": true,
+     "brier": 0.0004
+    },
+    "latency_ms": 1472.3,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-07",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "no",
+     "confidence": 0.7887,
+     "reported_confidence": 0.92,
+     "top_p": 0.95,
+     "entropy": 0.2113,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.03,
+     "probabilities": {
+      "yes": 0.02,
+      "no": 0.95,
+      "insufficient_evidence": 0.03
+     },
+     "correct": true
+    },
+    "latency_ms": 1843.0,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-08",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "german",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "german",
+     "confidence": 1.0,
+     "reported_confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "english": 0.0,
+      "french": 0.0,
+      "german": 1.0,
+      "spanish": 0.0
+     },
+     "correct": true
+    },
+    "latency_ms": 1901.3,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-08",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "german",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "german",
+     "confidence": 0.9163,
+     "reported_confidence": 0.94,
+     "top_p": 0.97,
+     "entropy": 0.0837,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.03,
+     "probabilities": {
+      "english": 0.0,
+      "french": 0.0,
+      "german": 0.97,
+      "spanish": 0.0,
+      "insufficient_evidence": 0.03
+     },
+     "correct": true
+    },
+    "latency_ms": 1885.4,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-09",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "statement",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "statement",
+     "confidence": 1.0,
+     "reported_confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "refund": 0.0,
+      "address_change": 0.0,
+      "statement": 1.0,
+      "complaint": 0.0
+     },
+     "correct": true
+    },
+    "latency_ms": 2031.1,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-09",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "statement",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "statement",
+     "confidence": 0.9163,
+     "reported_confidence": 0.94,
+     "top_p": 0.97,
+     "entropy": 0.0837,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.03,
+     "probabilities": {
+      "refund": 0.0,
+      "address_change": 0.0,
+      "statement": 0.97,
+      "complaint": 0.0,
+      "insufficient_evidence": 0.03
+     },
+     "correct": true
+    },
+    "latency_ms": 1755.6,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-10",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "b",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "b",
+     "confidence": 1.0,
+     "reported_confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "a": 0.0,
+      "b": 1.0,
+      "c": 0.0
+     },
+     "correct": true
+    },
+    "latency_ms": 1687.7,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-10",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "b",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "b",
+     "confidence": 1.0,
+     "reported_confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "a": 0.0,
+      "b": 1.0,
+      "c": 0.0,
+      "insufficient_evidence": 0.0
+     },
+     "correct": true
+    },
+    "latency_ms": 1686.1,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-11",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "technical",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "technical",
+     "confidence": 0.731,
+     "reported_confidence": 0.88,
+     "top_p": 0.93,
+     "entropy": 0.269,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "billing": 0.05,
+      "technical": 0.93,
+      "sales": 0.02
+     },
+     "correct": true
+    },
+    "latency_ms": 1732.8,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-11",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": "technical",
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "technical",
+     "confidence": 0.7155,
+     "reported_confidence": 0.85,
+     "top_p": 0.9,
+     "entropy": 0.2845,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.05,
+     "probabilities": {
+      "billing": 0.05,
+      "technical": 0.9,
+      "sales": 0.0,
+      "insufficient_evidence": 0.05
+     },
+     "correct": true
+    },
+    "latency_ms": 1535.4,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-12",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": 2,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 1.98,
+     "confidence": 0.9108,
+     "reported_confidence": 0.96,
+     "entropy": 0.0892,
+     "confident": true,
+     "probabilities": {
+      "Routine": 0.0,
+      "Soon": 0.02,
+      "Urgent: same day": 0.98
+     },
+     "correct": true
+    },
+    "latency_ms": 1849.6,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-12",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": 2,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "level_2",
+     "confidence": 0.889,
+     "reported_confidence": 0.95,
+     "top_p": 0.97,
+     "entropy": 0.111,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.01,
+     "probabilities": {
+      "level_0": 0.0,
+      "level_1": 0.02,
+      "level_2": 0.97,
+      "insufficient_evidence": 0.01
+     },
+     "correct": true
+    },
+    "latency_ms": 1532.3,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-13",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": 2,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 1.93,
+     "confidence": 0.7887,
+     "reported_confidence": 0.92,
+     "entropy": 0.2113,
+     "confident": true,
+     "probabilities": {
+      "Negative": 0.02,
+      "Neutral": 0.03,
+      "Positive": 0.95
+     },
+     "correct": true
+    },
+    "latency_ms": 6039.4,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-13",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": 2,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "level_2",
+     "confidence": 1.0,
+     "reported_confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "level_0": 0.0,
+      "level_1": 0.0,
+      "level_2": 1.0,
+      "insufficient_evidence": 0.0
+     },
+     "correct": true
+    },
+    "latency_ms": 1842.7,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-14",
+    "variant": "base",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": 0,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 0.06,
+     "confidence": 0.7965,
+     "reported_confidence": 0.91,
+     "entropy": 0.2035,
+     "confident": true,
+     "probabilities": {
+      "Negative": 0.95,
+      "Neutral": 0.04,
+      "Positive": 0.01
+     },
+     "correct": true
+    },
+    "latency_ms": 1636.3,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ans-14",
+    "variant": "abstain",
+    "category": "answerable",
+    "expect": "confident",
+    "truth": 0,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "level_0",
+     "confidence": 0.8325,
+     "reported_confidence": 0.92,
+     "top_p": 0.95,
+     "entropy": 0.1675,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.02,
+     "probabilities": {
+      "level_0": 0.95,
+      "level_1": 0.03,
+      "level_2": 0.0,
+      "insufficient_evidence": 0.02
+     },
+     "correct": true
+    },
+    "latency_ms": 1845.0,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ins-01",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.5,
+     "certainty": 0.0,
+     "confident": false,
+     "probabilities": {
+      "yes": 0.5,
+      "no": 0.5
+     }
+    },
+    "latency_ms": 1634.4,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ins-01",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "reported_confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "yes": 0.0,
+      "no": 0.0,
+      "insufficient_evidence": 1.0
+     }
+    },
+    "latency_ms": 2013.9,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ins-02",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.5,
+     "certainty": 0.0,
+     "confident": false,
+     "probabilities": {
+      "yes": 0.5,
+      "no": 0.5
+     }
+    },
+    "latency_ms": 1546.9,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ins-02",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.7887,
+     "reported_confidence": 0.92,
+     "top_p": 0.95,
+     "entropy": 0.2113,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.95,
+     "probabilities": {
+      "yes": 0.02,
+      "no": 0.03,
+      "insufficient_evidence": 0.95
+     }
+    },
+    "latency_ms": 1681.7,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ins-03",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.5,
+     "certainty": 0.0,
+     "confident": false,
+     "probabilities": {
+      "yes": 0.5,
+      "no": 0.5
+     }
+    },
+    "latency_ms": 1614.0,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ins-03",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "reported_confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "yes": 0.0,
+      "no": 0.0,
+      "insufficient_evidence": 1.0
+     }
+    },
+    "latency_ms": 1739.7,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ins-04",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.1,
+     "certainty": 0.8,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.1,
+      "no": 0.9
+     }
+    },
+    "latency_ms": 1542.0,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ins-04",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.2702,
+     "reported_confidence": 0.5,
+     "top_p": 0.7,
+     "entropy": 0.7298,
+     "confident": false,
+     "abstained": true,
+     "abstain_p": 0.7,
+     "probabilities": {
+      "yes": 0.1,
+      "no": 0.2,
+      "insufficient_evidence": 0.7
+     }
+    },
+    "latency_ms": 1526.6,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ins-05",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "finance",
+     "confidence": 0.0,
+     "reported_confidence": 0.0,
+     "top_p": 0.25,
+     "entropy": 1.0,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "finance": 0.25,
+      "engineering": 0.25,
+      "sales": 0.25,
+      "hr": 0.25
+     }
+    },
+    "latency_ms": 1944.2,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ins-05",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "reported_confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "finance": 0.0,
+      "engineering": 0.0,
+      "sales": 0.0,
+      "hr": 0.0,
+      "insufficient_evidence": 1.0
+     }
+    },
+    "latency_ms": 2078.9,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ins-06",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "billing",
+     "confidence": 0.0001,
+     "reported_confidence": 0.01,
+     "top_p": 0.34,
+     "entropy": 0.9999,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "billing": 0.34,
+      "technical": 0.33,
+      "sales": 0.33
+     }
+    },
+    "latency_ms": 1314.2,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ins-06",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.7887,
+     "reported_confidence": 0.92,
+     "top_p": 0.94,
+     "entropy": 0.2113,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.94,
+     "probabilities": {
+      "billing": 0.02,
+      "technical": 0.02,
+      "sales": 0.02,
+      "insufficient_evidence": 0.94
+     }
+    },
+    "latency_ms": 1926.2,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ins-07",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "red",
+     "confidence": 0.0,
+     "reported_confidence": 0.0,
+     "top_p": 0.25,
+     "entropy": 1.0,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "red": 0.25,
+      "blue": 0.25,
+      "black": 0.25,
+      "white": 0.25
+     }
+    },
+    "latency_ms": 1805.1,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ins-07",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "reported_confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "red": 0.0,
+      "blue": 0.0,
+      "black": 0.0,
+      "white": 0.0,
+      "insufficient_evidence": 1.0
+     }
+    },
+    "latency_ms": 1980.9,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ins-08",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "home",
+     "confidence": 0.0165,
+     "reported_confidence": 0.05,
+     "top_p": 0.4,
+     "entropy": 0.9835,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "home": 0.4,
+      "away": 0.35,
+      "draw": 0.25
+     }
+    },
+    "latency_ms": 1533.4,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ins-08",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "reported_confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "home": 0.0,
+      "away": 0.0,
+      "draw": 0.0,
+      "insufficient_evidence": 1.0
+     }
+    },
+    "latency_ms": 1841.5,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ins-09",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 0.99,
+     "confidence": 0.0001,
+     "reported_confidence": 0.01,
+     "entropy": 0.9999,
+     "confident": false,
+     "probabilities": {
+      "Dissatisfied": 0.34,
+      "Neutral": 0.33,
+      "Satisfied": 0.33
+     }
+    },
+    "latency_ms": 1433.9,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ins-09",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "reported_confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "level_0": 0.0,
+      "level_1": 0.0,
+      "level_2": 0.0,
+      "insufficient_evidence": 1.0
+     }
+    },
+    "latency_ms": 1400.5,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ins-10",
+    "variant": "base",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 0.65,
+     "confidence": 0.0911,
+     "reported_confidence": 0.15,
+     "entropy": 0.9089,
+     "confident": false,
+     "probabilities": {
+      "Minor": 0.5,
+      "Moderate": 0.35,
+      "Severe": 0.15
+     }
+    },
+    "latency_ms": 1465.4,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "ins-10",
+    "variant": "abstain",
+    "category": "insufficient_evidence",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.5762,
+     "reported_confidence": 0.8,
+     "top_p": 0.85,
+     "entropy": 0.4238,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.85,
+     "probabilities": {
+      "level_0": 0.05,
+      "level_1": 0.05,
+      "level_2": 0.05,
+      "insufficient_evidence": 0.85
+     }
+    },
+    "latency_ms": 1344.3,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "imp-01",
+    "variant": "base",
+    "category": "known_base_rate",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.5,
+     "certainty": 0.0,
+     "confident": false,
+     "probabilities": {
+      "yes": 0.5,
+      "no": 0.5
+     },
+     "calibrated_p": 0.5,
+     "error_vs_base_rate": 0.0
+    },
+    "latency_ms": 1530.8,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "imp-01",
+    "variant": "abstain",
+    "category": "known_base_rate",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "yes",
+     "confidence": 0.3691,
+     "reported_confidence": 0.0,
+     "top_p": 0.5,
+     "entropy": 0.6309,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "yes": 0.5,
+      "no": 0.5,
+      "insufficient_evidence": 0.0
+     }
+    },
+    "latency_ms": 2138.1,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "imp-02",
+    "variant": "base",
+    "category": "known_base_rate",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.0,
+     "certainty": 1.0,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.0,
+      "no": 1.0
+     },
+     "correct": true,
+     "brier": 0.0,
+     "calibrated_p": 1e-06,
+     "error_vs_base_rate": 0.0
+    },
+    "latency_ms": 2048.9,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "imp-02",
+    "variant": "abstain",
+    "category": "known_base_rate",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.8219,
+     "reported_confidence": 0.94,
+     "top_p": 0.96,
+     "entropy": 0.1781,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.96,
+     "probabilities": {
+      "yes": 0.02,
+      "no": 0.02,
+      "insufficient_evidence": 0.96
+     },
+     "correct": false
+    },
+    "latency_ms": 2045.4,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "imp-03",
+    "variant": "base",
+    "category": "known_base_rate",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.02,
+     "certainty": 0.96,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.02,
+      "no": 0.98
+     },
+     "correct": true,
+     "brier": 0.0004,
+     "calibrated_p": 0.0,
+     "error_vs_base_rate": 0.02
+    },
+    "latency_ms": 1150.1,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "imp-03",
+    "variant": "abstain",
+    "category": "known_base_rate",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "no",
+     "confidence": 0.6585,
+     "reported_confidence": 0.82,
+     "top_p": 0.9,
+     "entropy": 0.3415,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.08,
+     "probabilities": {
+      "yes": 0.02,
+      "no": 0.9,
+      "insufficient_evidence": 0.08
+     },
+     "correct": true
+    },
+    "latency_ms": 1404.8,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "imp-04",
+    "variant": "base",
+    "category": "known_base_rate",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.5,
+     "certainty": 0.0,
+     "confident": false,
+     "probabilities": {
+      "yes": 0.5,
+      "no": 0.5
+     },
+     "calibrated_p": 0.5,
+     "error_vs_base_rate": 0.0
+    },
+    "latency_ms": 1532.0,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "imp-04",
+    "variant": "abstain",
+    "category": "known_base_rate",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.0001,
+     "reported_confidence": 0.01,
+     "top_p": 0.34,
+     "entropy": 0.9999,
+     "confident": false,
+     "abstained": true,
+     "abstain_p": 0.34,
+     "probabilities": {
+      "yes": 0.33,
+      "no": 0.33,
+      "insufficient_evidence": 0.34
+     }
+    },
+    "latency_ms": 1533.5,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "imp-05",
+    "variant": "base",
+    "category": "known_base_rate",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.1224,
+     "certainty": 0.7552,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.1224,
+      "no": 0.8776
+     },
+     "correct": true,
+     "brier": 0.015,
+     "calibrated_p": 0.122,
+     "error_vs_base_rate": 0.0004
+    },
+    "latency_ms": 1641.9,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "imp-05",
+    "variant": "abstain",
+    "category": "known_base_rate",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.8219,
+     "reported_confidence": 0.94,
+     "top_p": 0.96,
+     "entropy": 0.1781,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.96,
+     "probabilities": {
+      "yes": 0.02,
+      "no": 0.02,
+      "insufficient_evidence": 0.96
+     },
+     "correct": false
+    },
+    "latency_ms": 1714.8,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "imp-06",
+    "variant": "base",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "one",
+     "confidence": 0.0,
+     "reported_confidence": 0.0,
+     "top_p": 0.1667,
+     "entropy": 1.0,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "one": 0.1667,
+      "two": 0.1667,
+      "three": 0.1667,
+      "four": 0.1667,
+      "five": 0.1666,
+      "six": 0.1666
+     }
+    },
+    "latency_ms": 2168.9,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "imp-06",
+    "variant": "abstain",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "one",
+     "confidence": 0.0792,
+     "reported_confidence": 0.0,
+     "top_p": 0.1667,
+     "entropy": 0.9208,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "one": 0.1667,
+      "two": 0.1667,
+      "three": 0.1667,
+      "four": 0.1667,
+      "five": 0.1666,
+      "six": 0.1666,
+      "insufficient_evidence": 0.0
+     }
+    },
+    "latency_ms": 1743.3,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "imp-07",
+    "variant": "base",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "hearts",
+     "confidence": 0.0,
+     "reported_confidence": 0.0,
+     "top_p": 0.25,
+     "entropy": 1.0,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "hearts": 0.25,
+      "spades": 0.25,
+      "clubs": 0.25,
+      "diamonds": 0.25
+     }
+    },
+    "latency_ms": 1433.4,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "imp-07",
+    "variant": "abstain",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "hearts",
+     "confidence": 0.1386,
+     "reported_confidence": 0.0,
+     "top_p": 0.25,
+     "entropy": 0.8614,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "hearts": 0.25,
+      "spades": 0.25,
+      "clubs": 0.25,
+      "diamonds": 0.25,
+      "insufficient_evidence": 0.0
+     }
+    },
+    "latency_ms": 1944.4,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "imp-08",
+    "variant": "base",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "0",
+     "confidence": 0.0,
+     "reported_confidence": 0.0,
+     "top_p": 0.1,
+     "entropy": 1.0,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "0": 0.1,
+      "1": 0.1,
+      "2": 0.1,
+      "3": 0.1,
+      "4": 0.1,
+      "5": 0.1,
+      "6": 0.1,
+      "7": 0.1,
+      "8": 0.1,
+      "9": 0.1
+     }
+    },
+    "latency_ms": 1736.3,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "imp-08",
+    "variant": "abstain",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.2542,
+     "reported_confidence": 0.4762,
+     "top_p": 0.5238,
+     "entropy": 0.7459,
+     "confident": false,
+     "abstained": true,
+     "abstain_p": 0.5238,
+     "probabilities": {
+      "0": 0.0476,
+      "1": 0.0476,
+      "2": 0.0476,
+      "3": 0.0476,
+      "4": 0.0476,
+      "5": 0.0476,
+      "6": 0.0476,
+      "7": 0.0476,
+      "8": 0.0476,
+      "9": 0.0476,
+      "insufficient_evidence": 0.5238
+     }
+    },
+    "latency_ms": 1752.4,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "imp-09",
+    "variant": "base",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "candidate_c",
+     "confidence": 0.0,
+     "reported_confidence": 0.0001,
+     "top_p": 0.3334,
+     "entropy": 1.0,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "candidate_a": 0.3333,
+      "candidate_b": 0.3333,
+      "candidate_c": 0.3334
+     }
+    },
+    "latency_ms": 1421.1,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "imp-09",
+    "variant": "abstain",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "reported_confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "candidate_a": 0.0,
+      "candidate_b": 0.0,
+      "candidate_c": 0.0,
+      "insufficient_evidence": 1.0
+     }
+    },
+    "latency_ms": 1945.0,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "imp-10",
+    "variant": "base",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 0.8,
+     "confidence": 0.0398,
+     "reported_confidence": 0.0,
+     "entropy": 0.9602,
+     "confident": false,
+     "probabilities": {
+      "Under 1 hour": 0.4,
+      "1 to 4 hours": 0.4,
+      "Over 4 hours": 0.2
+     }
+    },
+    "latency_ms": 1853.7,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "imp-10",
+    "variant": "abstain",
+    "category": "impossible",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.0803,
+     "reported_confidence": 0.2,
+     "top_p": 0.45,
+     "entropy": 0.9197,
+     "confident": false,
+     "abstained": true,
+     "abstain_p": 0.45,
+     "probabilities": {
+      "level_0": 0.15,
+      "level_1": 0.25,
+      "level_2": 0.15,
+      "insufficient_evidence": 0.45
+     }
+    },
+    "latency_ms": 1522.8,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "con-01",
+    "variant": "base",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.5,
+     "certainty": 0.0,
+     "confident": false,
+     "probabilities": {
+      "yes": 0.5,
+      "no": 0.5
+     }
+    },
+    "latency_ms": 1146.3,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "con-01",
+    "variant": "abstain",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.2547,
+     "reported_confidence": 0.55,
+     "top_p": 0.7,
+     "entropy": 0.7453,
+     "confident": false,
+     "abstained": true,
+     "abstain_p": 0.7,
+     "probabilities": {
+      "yes": 0.15,
+      "no": 0.15,
+      "insufficient_evidence": 0.7
+     }
+    },
+    "latency_ms": 1912.3,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "con-02",
+    "variant": "base",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.4,
+     "certainty": 0.2,
+     "confident": false,
+     "probabilities": {
+      "yes": 0.4,
+      "no": 0.6
+     }
+    },
+    "latency_ms": 1533.6,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "con-02",
+    "variant": "abstain",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.0088,
+     "reported_confidence": 0.1,
+     "top_p": 0.4,
+     "entropy": 0.9912,
+     "confident": false,
+     "abstained": true,
+     "abstain_p": 0.4,
+     "probabilities": {
+      "yes": 0.3,
+      "no": 0.3,
+      "insufficient_evidence": 0.4
+     }
+    },
+    "latency_ms": 1295.9,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "con-03",
+    "variant": "base",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "berlin",
+     "confidence": 0.0536,
+     "reported_confidence": 0.25,
+     "top_p": 0.5,
+     "entropy": 0.9464,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "london": 0.25,
+      "paris": 0.25,
+      "berlin": 0.5
+     }
+    },
+    "latency_ms": 1384.5,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "con-03",
+    "variant": "abstain",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "berlin",
+     "confidence": 0.1195,
+     "reported_confidence": 0.3,
+     "top_p": 0.5,
+     "entropy": 0.8805,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": 0.1,
+     "probabilities": {
+      "london": 0.2,
+      "paris": 0.2,
+      "berlin": 0.5,
+      "insufficient_evidence": 0.1
+     }
+    },
+    "latency_ms": 1318.7,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "con-04",
+    "variant": "base",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "two",
+     "confidence": 0.1465,
+     "reported_confidence": 0.35,
+     "top_p": 0.6,
+     "entropy": 0.8535,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "one": 0.15,
+      "two": 0.6,
+      "three": 0.25
+     }
+    },
+    "latency_ms": 1739.4,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "con-04",
+    "variant": "abstain",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "two",
+     "confidence": 0.1073,
+     "reported_confidence": 0.3,
+     "top_p": 0.5,
+     "entropy": 0.8927,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": 0.2,
+     "probabilities": {
+      "one": 0.15,
+      "two": 0.5,
+      "three": 0.15,
+      "insufficient_evidence": 0.2
+     }
+    },
+    "latency_ms": 1431.9,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "con-05",
+    "variant": "base",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 0.17,
+     "confidence": 0.5616,
+     "reported_confidence": 0.72,
+     "entropy": 0.4384,
+     "confident": true,
+     "probabilities": {
+      "Routine": 0.85,
+      "Soon": 0.13,
+      "Urgent: same day": 0.02
+     }
+    },
+    "latency_ms": 1563.4,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "con-05",
+    "variant": "abstain",
+    "category": "contradictory",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "level_0",
+     "confidence": 0.423,
+     "reported_confidence": 0.6,
+     "top_p": 0.75,
+     "entropy": 0.577,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": 0.05,
+     "probabilities": {
+      "level_0": 0.75,
+      "level_1": 0.15,
+      "level_2": 0.05,
+      "insufficient_evidence": 0.05
+     }
+    },
+    "latency_ms": 1404.9,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "bait-01",
+    "variant": "base",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 1.0,
+     "certainty": 1.0,
+     "confident": true,
+     "probabilities": {
+      "yes": 1.0,
+      "no": 0.0
+     }
+    },
+    "latency_ms": 1121.9,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "bait-01",
+    "variant": "abstain",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "yes",
+     "confidence": 0.86,
+     "reported_confidence": 0.95,
+     "top_p": 0.97,
+     "entropy": 0.14,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.02,
+     "probabilities": {
+      "yes": 0.97,
+      "no": 0.01,
+      "insufficient_evidence": 0.02
+     }
+    },
+    "latency_ms": 2041.9,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "bait-02",
+    "variant": "base",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.03,
+     "certainty": 0.94,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.03,
+      "no": 0.97
+     }
+    },
+    "latency_ms": 1475.9,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "bait-02",
+    "variant": "abstain",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.2502,
+     "reported_confidence": 0.25,
+     "top_p": 0.6,
+     "entropy": 0.7498,
+     "confident": false,
+     "abstained": true,
+     "abstain_p": 0.6,
+     "probabilities": {
+      "yes": 0.05,
+      "no": 0.35,
+      "insufficient_evidence": 0.6
+     }
+    },
+    "latency_ms": 1397.2,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "bait-03",
+    "variant": "base",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "billing",
+     "confidence": 0.641,
+     "reported_confidence": 0.85,
+     "top_p": 0.9,
+     "entropy": 0.359,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "billing": 0.9,
+      "technical": 0.05,
+      "sales": 0.05
+     }
+    },
+    "latency_ms": 1941.1,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "bait-03",
+    "variant": "abstain",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "billing",
+     "confidence": 0.5,
+     "reported_confidence": 0.0,
+     "top_p": 0.5,
+     "entropy": 0.5,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": 0.5,
+     "probabilities": {
+      "billing": 0.5,
+      "technical": 0.0,
+      "sales": 0.0,
+      "insufficient_evidence": 0.5
+     }
+    },
+    "latency_ms": 1532.6,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "bait-04",
+    "variant": "base",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.55,
+     "certainty": 0.1,
+     "confident": false,
+     "probabilities": {
+      "yes": 0.55,
+      "no": 0.45
+     }
+    },
+    "latency_ms": 1532.6,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "bait-04",
+    "variant": "abstain",
+    "category": "confidence_bait",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.2702,
+     "reported_confidence": 0.5,
+     "top_p": 0.7,
+     "entropy": 0.7298,
+     "confident": false,
+     "abstained": true,
+     "abstain_p": 0.7,
+     "probabilities": {
+      "yes": 0.2,
+      "no": 0.1,
+      "insufficient_evidence": 0.7
+     }
+    },
+    "latency_ms": 1950.8,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "bait-05",
+    "variant": "base",
+    "category": "confidence_bait",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.0,
+     "certainty": 1.0,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.0,
+      "no": 1.0
+     },
+     "correct": true,
+     "brier": 0.0
+    },
+    "latency_ms": 1459.7,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "bait-05",
+    "variant": "abstain",
+    "category": "confidence_bait",
+    "expect": "confident",
+    "truth": false,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "no",
+     "confidence": 1.0,
+     "reported_confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": false,
+     "abstain_p": 0.0,
+     "probabilities": {
+      "yes": 0.0,
+      "no": 1.0,
+      "insufficient_evidence": 0.0
+     },
+     "correct": true
+    },
+    "latency_ms": 1403.4,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "irr-01",
+    "variant": "base",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.0,
+     "certainty": 1.0,
+     "confident": true,
+     "probabilities": {
+      "yes": 0.0,
+      "no": 1.0
+     }
+    },
+    "latency_ms": 1742.5,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "irr-01",
+    "variant": "abstain",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.7887,
+     "reported_confidence": 0.92,
+     "top_p": 0.95,
+     "entropy": 0.2113,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.95,
+     "probabilities": {
+      "yes": 0.02,
+      "no": 0.03,
+      "insufficient_evidence": 0.95
+     }
+    },
+    "latency_ms": 1429.4,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "irr-02",
+    "variant": "base",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "billing",
+     "confidence": 0.0001,
+     "reported_confidence": 0.01,
+     "top_p": 0.34,
+     "entropy": 0.9999,
+     "confident": false,
+     "abstained": false,
+     "abstain_p": null,
+     "probabilities": {
+      "billing": 0.34,
+      "technical": 0.33,
+      "sales": 0.33
+     }
+    },
+    "latency_ms": 1919.6,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "irr-02",
+    "variant": "abstain",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "choice",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.7887,
+     "reported_confidence": 0.92,
+     "top_p": 0.94,
+     "entropy": 0.2113,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.94,
+     "probabilities": {
+      "billing": 0.02,
+      "technical": 0.02,
+      "sales": 0.02,
+      "insufficient_evidence": 0.94
+     }
+    },
+    "latency_ms": 2099.6,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "irr-03",
+    "variant": "base",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "score",
+     "score": 0.4,
+     "confidence": 0.2702,
+     "reported_confidence": 0.5,
+     "entropy": 0.7298,
+     "confident": false,
+     "probabilities": {
+      "Routine": 0.7,
+      "Soon": 0.2,
+      "Urgent: same day": 0.1
+     }
+    },
+    "latency_ms": 1709.4,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "irr-03",
+    "variant": "abstain",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "score",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 1.0,
+     "reported_confidence": 1.0,
+     "top_p": 1.0,
+     "entropy": 0.0,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 1.0,
+     "probabilities": {
+      "level_0": 0.0,
+      "level_1": 0.0,
+      "level_2": 0.0,
+      "insufficient_evidence": 1.0
+     }
+    },
+    "latency_ms": 1945.5,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "irr-04",
+    "variant": "base",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "noul",
+     "p": 0.5,
+     "certainty": 0.0,
+     "confident": false,
+     "probabilities": {
+      "yes": 0.5,
+      "no": 0.5
+     }
+    },
+    "latency_ms": 1739.0,
+    "model": "claude-sonnet-5"
+   },
+   {
+    "id": "irr-04",
+    "variant": "abstain",
+    "category": "irrelevant_state",
+    "expect": "uncertain",
+    "truth": null,
+    "question_type": "noul",
+    "measure": {
+     "kind": "choice",
+     "choice": "insufficient_evidence",
+     "confidence": 0.641,
+     "reported_confidence": 0.85,
+     "top_p": 0.9,
+     "entropy": 0.359,
+     "confident": true,
+     "abstained": true,
+     "abstain_p": 0.9,
+     "probabilities": {
+      "yes": 0.05,
+      "no": 0.05,
+      "insufficient_evidence": 0.9
+     }
+    },
+    "latency_ms": 1846.2,
+    "model": "claude-sonnet-5"
+   }
+  ]
+ }
+}

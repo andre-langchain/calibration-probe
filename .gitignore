@@ -1,0 +1,13 @@
+# secrets and local environment
+.env
+.venv/
+# caches
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+# local tooling config, not part of the project
+.github/instructions/
+# internal, not audience-facing
+results/probe.xlsx
+results/onepager_data.json
